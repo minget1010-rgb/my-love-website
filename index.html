@@ -7,277 +7,442 @@
 <title>A Little Love ❤️</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{
- font-family:Georgia,serif;
- background:#fff7f8;
- color:#603344;
- overflow-x:hidden;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-button{cursor:pointer;border:0;font-family:inherit}
-.topbar{
- display:flex;justify-content:space-between;
- align-items:center;padding:18px 7%;
- background:#fff;position:sticky;top:0;z-index:10;
- box-shadow:0 3px 15px #0000000a;
+
+html {
+  scroll-behavior: smooth;
 }
-.logo{color:#d63370;font-size:22px;font-weight:bold}
-.lang{
- background:#ffe0eb;color:#ad2458;
- padding:10px 18px;border-radius:25px;
+
+body {
+  font-family: Georgia, serif;
+  background: #fff7f8;
+  color: #603344;
+  overflow-x: hidden;
 }
-.hero{
- min-height:85vh;display:flex;align-items:center;
- justify-content:center;text-align:center;
- padding:35px 20px;color:white;
- background:linear-gradient(#35101e77,#35101e77),
- url("https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=1600")
- center/cover;
+
+button {
+  cursor: pointer;
+  border: 0;
+  font-family: inherit;
 }
-.hero-content{max-width:750px}
-.hero h1{font-size:clamp(40px,8vw,75px);margin-bottom:20px}
-.hero p{font-size:19px;line-height:1.9}
-.main-btn{
- margin-top:28px;padding:15px 30px;
- background:#e84d83;color:white;
- border-radius:30px;font-size:17px;
- box-shadow:0 5px 20px #0003;
- transition:.3s;
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 7%;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 3px 15px #0000000a;
 }
-.main-btn:hover{transform:translateY(-4px);background:#c62c68}
-section{padding:75px 20px;text-align:center}
-.heading{font-size:34px;color:#c52c69;margin-bottom:15px}
-.description{line-height:1.9;color:#916779}
-.gallery{
- max-width:1100px;margin:35px auto;
- display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
- gap:22px;
+
+.logo {
+  color: #d63370;
+  font-size: 22px;
+  font-weight: bold;
 }
-.gallery img{
- width:100%;height:320px;object-fit:cover;
- border-radius:22px;box-shadow:0 8px 25px #a74d6b22;
- transition:.4s;
+
+.lang {
+  background: #ffe0eb;
+  color: #ad2458;
+  padding: 10px 18px;
+  border-radius: 25px;
 }
-.gallery img:hover{transform:translateY(-8px) scale(1.02)}
-.letter-card{
- max-width:750px;margin:30px auto;
- padding:35px;background:white;border-radius:25px;
- box-shadow:0 8px 35px #a74d6b22;
- line-height:2;font-size:18px;
+
+.hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 35px 20px;
+  color: white;
+  background:
+    linear-gradient(#35101e77, #35101e77),
+    url("https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=1600")
+    center/cover;
 }
-#letter{display:none}
-.music-card{
- max-width:500px;margin:30px auto;
- padding:30px;background:#fff;border-radius:25px;
- box-shadow:0 8px 30px #a74d6b20;
+
+.hero-content {
+  max-width: 750px;
 }
-audio{width:100%;margin-top:20px}
-.question{
- background:linear-gradient(135deg,#ffe1ed,#fff);
+
+.hero h1 {
+  font-size: clamp(40px, 8vw, 75px);
+  margin-bottom: 20px;
 }
-footer{
- background:#4c1d32;color:white;
- text-align:center;padding:35px;line-height:2;
+
+.hero p {
+  font-size: 19px;
+  line-height: 1.9;
 }
-#intro{
- position:fixed;inset:0;z-index:100;
- background:linear-gradient(135deg,#651d43,#d94e83);
- color:white;display:flex;align-items:center;
- justify-content:center;text-align:center;padding:25px;
+
+.main-btn {
+  margin-top: 28px;
+  padding: 15px 30px;
+  background: #e84d83;
+  color: white;
+  border-radius: 30px;
+  font-size: 17px;
+  box-shadow: 0 5px 20px #0003;
+  transition: .3s;
 }
-.intro-content h1{font-size:clamp(35px,8vw,65px);margin:20px}
-.intro-content p{line-height:2}
-.floating-heart{
- position:fixed;bottom:-40px;z-index:5;
- pointer-events:none;animation:float 7s linear forwards;
+
+.main-btn:hover {
+  transform: translateY(-4px);
+  background: #c62c68;
 }
-@keyframes float{
- to{transform:translateY(-110vh) rotate(360deg);opacity:0}
+
+section {
+  padding: 75px 20px;
+  text-align: center;
 }
-@media(max-width:600px){
- .hero{min-height:75vh}
- section{padding:55px 15px}
- .heading{font-size:28px}
- .gallery img{height:280px}
+
+.heading {
+  font-size: 34px;
+  color: #c52c69;
+  margin-bottom: 15px;
+}
+
+.description {
+  line-height: 1.9;
+  color: #916779;
+}
+
+.gallery {
+  max-width: 1100px;
+  margin: 35px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 22px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 22px;
+  box-shadow: 0 8px 25px #a74d6b22;
+  transition: .4s;
+}
+
+.gallery img:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.letter-card {
+  max-width: 750px;
+  margin: 30px auto;
+  padding: 35px;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 8px 35px #a74d6b22;
+  line-height: 2;
+  font-size: 18px;
+  display: none;
+}
+
+.music-card {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 8px 30px #a74d6b20;
+}
+
+audio {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.question {
+  background: linear-gradient(135deg, #ffe1ed, #fff);
+}
+
+footer {
+  background: #4c1d32;
+  color: white;
+  text-align: center;
+  padding: 35px;
+  line-height: 2;
+}
+
+#intro {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: linear-gradient(135deg, #651d43, #d94e83);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 25px;
+}
+
+.intro-content h1 {
+  font-size: clamp(35px, 8vw, 65px);
+  margin: 20px;
+}
+
+.intro-content p {
+  line-height: 2;
+}
+
+.floating-heart {
+  position: fixed;
+  bottom: -40px;
+  z-index: 5;
+  pointer-events: none;
+  animation: float 7s linear forwards;
+}
+
+@keyframes float {
+  to {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@media(max-width: 600px) {
+  .hero {
+    min-height: 75vh;
+  }
+
+  section {
+    padding: 55px 15px;
+  }
+
+  .heading {
+    font-size: 28px;
+  }
+
+  .gallery img {
+    height: 280px;
+  }
+
+  .letter-card {
+    padding: 22px;
+    font-size: 16px;
+  }
 }
 </style>
 </head>
 
 <body>
 
+<!-- INTRO -->
 <div id="intro">
- <div class="intro-content">
-  <div style="font-size:65px">💌</div>
-  <h1>A Little Surprise</h1>
-  <p>A special little world, made with love. ❤️</p>
-  <button class="main-btn" onclick="startSite()">
-   Open My Surprise 💗
-  </button>
- </div>
+  <div class="intro-content">
+    <div style="font-size:65px">💌</div>
+    <h1>A Little Surprise</h1>
+    <p>A special little world, made with love. ❤️</p>
+    <button class="main-btn" onclick="startSite()">
+      Open My Surprise 💗
+    </button>
+  </div>
 </div>
 
+<!-- NAVIGATION -->
 <nav class="topbar">
- <div class="logo">❤️ My Love</div>
- <button class="lang" onclick="changeLanguage()" id="langBtn">
-  አማርኛ
- </button>
+  <div class="logo">❤️ My Love</div>
+  <button class="lang" onclick="changeLanguage()" id="langBtn">
+    አማርኛ
+  </button>
 </nav>
 
+<!-- HERO -->
 <header class="hero">
- <div class="hero-content">
-  <h1 data-en="You Are My Beautiful Story ❤️"
-      data-am="አንቺ የህይወቴ ውብ ታሪክ ነሽ ❤️">
-   You Are My Beautiful Story ❤️
-  </h1>
-  <p data-en="Some people make the world more beautiful just by being in it. You are one of them."
-     data-am="አንዳንድ ሰዎች በመኖራቸው ብቻ ዓለምን ያሳምራሉ። አንቺም ከእነዚያ አንዷ ነሽ።">
-   Some people make the world more beautiful just by being in it. You are one of them.
-  </p>
-  <button class="main-btn" onclick="showLetter()"
-   data-en="Read My Letter 💌"
-   data-am="ደብዳቤዬን አንብቢ 💌">
-   Read My Letter 💌
-  </button>
- </div>
+  <div class="hero-content">
+    <h1 data-en="You Are My Beautiful Story ❤️"
+        data-am="አንቺ የህይወቴ ውብ ታሪክ ነሽ ❤️">
+      You Are My Beautiful Story ❤️
+    </h1>
+
+    <p data-en="Some people make the world more beautiful just by being in it. You are one of them."
+       data-am="አንዳንድ ሰዎች በመኖራቸው ብቻ ዓለምን ያሳምራሉ። አንቺም ከእነዚያ አንዷ ነሽ።">
+      Some people make the world more beautiful just by being in it. You are one of them.
+    </p>
+
+    <button class="main-btn" onclick="showLetter()"
+      data-en="Read My Letter 💌"
+      data-am="ደብዳቤዬን አንብቢ 💌">
+      Read My Letter 💌
+    </button>
+  </div>
 </header>
 
+<!-- LETTER -->
 <section id="letterSection">
- <h2 class="heading" data-en="A Letter From My Heart"
-     data-am="ከልቤ የተጻፈ ደብዳቤ">
-  A Letter From My Heart
- </h2>
-
- <div class="letter-card" id="letter">
-  <div style="font-size:45px">💌</div>
-  <h2 style="color:#d63370">My Sweet Love ❤️</h2>
-  <br>
-  <p data-en="My dear, I may not always find the perfect words, but I hope you always feel how special you are."
-     data-am="ውዴ፣ ሁልጊዜ ትክክለኛውን ቃል ላገኝ አልችልም፤ ግን ለእኔ ምን ያህል ልዩ እንደሆንሽ ሁልጊዜ እንድትሰሚ እመኛለሁ።">
-   My dear, I may not always find the perfect words, but I hope you always feel how special you are.
-  </p>
-  <br>
-  <p data-en="Your smile is a beautiful sunshine, your kindness is a gift, and every moment with you is a memory worth keeping."
-     data-am="ፈገግታሽ ውብ ፀሐይ ነው፣ ደግነትሽ ስጦታ ነው፣ ከአንቺ ጋር የሚያልፍ ጊዜም ሁሉ ሊጠበቅ የሚገባው ትዝታ ነው።">
-   Your smile is a beautiful sunshine, your kindness is a gift, and every moment with you is a memory worth keeping.
-  </p>
-  <br>
-  <p data-en="Thank you for being you. May life always give us reasons to smile together."
-     data-am="እንደሆንሽ ስለሆንሽ አመሰግናለሁ። ህይወት አብረን የምንስቅባቸውን ብዙ ምክንያቶች ትስጠን።">
-   Thank you for being you. May life always give us reasons to smile together.
-  </p>
-  <br>
-  <h2 style="color:#d63370">Forever With Love ❤️</h2>
- </div>
-</section>
-
-<section>
- <h2 class="heading" data-en="A World Of Beauty 🌹"
-     data-am="የውበት ዓለም 🌹">
-  A World Of Beauty 🌹
- </h2>
- <p class="description"
-    data-en="Beautiful moments, flowers and endless memories."
-    data-am="ውብ ጊዜያት፣ አበቦችና የማይረሱ ትዝታዎች።">
-  Beautiful moments, flowers and endless memories.
- </p>
-
- <div class="gallery">
-  <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=800" alt="Flowers">
-  <img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=800" alt="Roses">
-  <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800" alt="Couple">
-  <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800" alt="Nature">
- </div>
-</section>
-
-<section>
- <div class="music-card">
-  <h2 class="heading" data-en="Music For The Heart 🎵"
-      data-am="ለልብ የሚሆን ሙዚቃ 🎵">
-   Music For The Heart 🎵
+  <h2 class="heading"
+      data-en="A Letter From My Heart"
+      data-am="ከልቤ የተጻፈ ደብዳቤ">
+    A Letter From My Heart
   </h2>
-  <p data-en="A little music makes every moment special."
-     data-am="ትንሽ ሙዚቃ እያንዳንዱን ጊዜ ልዩ ያደርገዋል።">
-   A little music makes every moment special.
+
+  <div class="letter-card" id="letter">
+    <div style="font-size:45px">💌</div>
+    <h2 style="color:#d63370">My Sweet Love ❤️</h2>
+    <br>
+
+    <p data-en="My dear, I may not always find the perfect words, but I hope you always feel how special you are."
+       data-am="ውዴ፣ ሁልጊዜ ትክክለኛውን ቃል ላገኝ አልችልም፤ ግን ለእኔ ምን ያህል ልዩ እንደሆንሽ ሁልጊዜ እንድትሰሚ እመኛለሁ።">
+      My dear, I may not always find the perfect words, but I hope you always feel how special you are.
+    </p>
+    <br>
+
+    <p data-en="Your smile is a beautiful sunshine, your kindness is a gift, and every moment with you is a memory worth keeping."
+       data-am="ፈገግታሽ ውብ ፀሐይ ነው፣ ደግነትሽ ስጦታ ነው፣ ከአንቺ ጋር የሚያልፍ ጊዜም ሁሉ ሊጠበቅ የሚገባው ትዝታ ነው።">
+      Your smile is a beautiful sunshine, your kindness is a gift, and every moment with you is a memory worth keeping.
+    </p>
+    <br>
+
+    <p data-en="Thank you for being you. May life always give us reasons to smile together."
+       data-am="እንደሆንሽ ስለሆንሽ አመሰግናለሁ። ህይወት አብረን የምንስቅባቸውን ብዙ ምክንያቶች ትስጠን።">
+      Thank you for being you. May life always give us reasons to smile together.
+    </p>
+    <br>
+
+    <h2 style="color:#d63370">Forever With Love ❤️</h2>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section>
+  <h2 class="heading"
+      data-en="A World Of Beauty 🌹"
+      data-am="የውበት ዓለም 🌹">
+    A World Of Beauty 🌹
+  </h2>
+
+  <p class="description"
+     data-en="Beautiful moments, flowers and endless memories."
+     data-am="ውብ ጊዜያት፣ አበቦችና የማይረሱ ትዝታዎች።">
+    Beautiful moments, flowers and endless memories.
   </p>
-  <audio controls loop>
-   <source src="music.mp3" type="audio/mpeg">
-  </audio>
- </div>
+
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=800" alt="Flowers">
+    <img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=800" alt="Roses">
+    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800" alt="Couple">
+    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800" alt="Nature">
+  </div>
 </section>
 
+<!-- MUSIC -->
+<section>
+  <div class="music-card">
+    <h2 class="heading"
+        data-en="Music For The Heart 🎵"
+        data-am="ለልብ የሚሆን ሙዚቃ 🎵">
+      Music For The Heart 🎵
+    </h2>
+
+    <p data-en="A little music makes every moment special."
+       data-am="ትንሽ ሙዚቃ እያንዳንዱን ጊዜ ልዩ ያደርገዋል።">
+      A little music makes every moment special.
+    </p>
+
+    <audio controls loop>
+      <source src="music.mp3" type="audio/mpeg">
+      Your browser does not support audio.
+    </audio>
+  </div>
+</section>
+
+<!-- QUESTION -->
 <section class="question">
- <h2 class="heading" data-en="One Little Question 💕"
-     data-am="አንድ ትንሽ ጥያቄ 💕">
-  One Little Question 💕
- </h2>
- <p data-en="Do you know how special you are?"
-    data-am="ለእኔ ምን ያህል ልዩ እንደሆንሽ ታውቂያለሽ?">
-  Do you know how special you are?
- </p>
- <button class="main-btn" onclick="answer()"
-  data-en="Tell Me ❤️" data-am="ንገረኝ ❤️">
-  Tell Me ❤️
- </button>
- <h3 id="answer" style="margin-top:20px"></h3>
+  <h2 class="heading"
+      data-en="One Little Question 💕"
+      data-am="አንድ ትንሽ ጥያቄ 💕">
+    One Little Question 💕
+  </h2>
+
+  <p data-en="Do you know how special you are?"
+     data-am="ለእኔ ምን ያህል ልዩ እንደሆንሽ ታውቂያለሽ?">
+    Do you know how special you are?
+  </p>
+
+  <button class="main-btn" onclick="answer()"
+    data-en="Tell Me ❤️"
+    data-am="ንገረኝ ❤️">
+    Tell Me ❤️
+  </button>
+
+  <h3 id="answer" style="margin-top:20px"></h3>
 </section>
 
+<!-- FOOTER -->
 <footer>
- <h2>❤️ My Love ❤️</h2>
- <p data-en="Created with love, just for you."
-    data-am="በፍቅር ለአንቺ ብቻ የተሰራ።">
-  Created with love, just for you.
- </p>
- <p>🌹 Forever Love 🌹</p>
+  <h2>❤️ My Love ❤️</h2>
+
+  <p data-en="Created with love, just for you."
+     data-am="በፍቅር ለአንቺ ብቻ የተሰራ።">
+    Created with love, just for you.
+  </p>
+
+  <p>🌹 Forever Love 🌹</p>
 </footer>
 
 <script>
-let language="en";
+let language = "en";
 
-function startSite(){
- document.getElementById("intro").style.display="none";
+function startSite() {
+  document.getElementById("intro").style.display = "none";
 }
 
-function showLetter(){
- const letter=document.getElementById("letter");
- letter.style.display="block";
- document.getElementById("letterSection").scrollIntoView();
+function showLetter() {
+  const letter = document.getElementById("letter");
+  letter.style.display = "block";
+  document.getElementById("letterSection").scrollIntoView();
 }
 
-function changeLanguage(){
- language=language==="en"?"am":"en";
+function changeLanguage() {
+  language = language === "en" ? "am" : "en";
 
- document.querySelectorAll("[data-en]").forEach(el=>{
-  el.textContent=el.dataset[language];
- });
+  document.querySelectorAll("[data-en]").forEach(el => {
+    el.textContent = el.dataset[language];
+  });
 
- document.getElementById("langBtn").textContent=
- language==="en"?"አማርኛ":"English";
+  document.getElementById("langBtn").textContent =
+    language === "en" ? "አማርኛ" : "English";
 
- document.documentElement.lang=language;
+  document.documentElement.lang = language;
 }
 
-function answer(){
- document.getElementById("answer").textContent=
- language==="en"
- ?"You are loved more than words can say! ❤️"
- :"ከቃላት በላይ ትወደጃለሽ! ❤️";
+function answer() {
+  document.getElementById("answer").textContent =
+    language === "en"
+      ? "You are loved more than words can say! ❤️"
+      : "ከቃላት በላይ ትወደጃለሽ! ❤️";
 }
 
-function createHeart(){
- const heart=document.createElement("div");
- heart.className="floating-heart";
- heart.textContent=["❤️","💕","💗","🌸"][Math.floor(Math.random()*4)];
- heart.style.left=Math.random()*100+"vw";
- heart.style.fontSize=(15+Math.random()*25)+"px";
- heart.style.animationDuration=(4+Math.random()*4)+"s";
- document.body.appendChild(heart);
- setTimeout(()=>heart.remove(),8000);
+function createHeart() {
+  const heart = document.createElement("div");
+
+  heart.className = "floating-heart";
+  heart.textContent = ["❤️", "💕", "💗", "🌸"][
+    Math.floor(Math.random() * 4)
+  ];
+
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = (15 + Math.random() * 25) + "px";
+  heart.style.animationDuration = (4 + Math.random() * 4) + "s";
+
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(), 8000);
 }
 
-setInterval(createHeart,700);
+setInterval(createHeart, 700);
 </script>
 
 </body>
 </html>
-
