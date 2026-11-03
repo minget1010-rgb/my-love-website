@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Makiye ❤️ | My Love World</title>
+<title>For Makiye ❤️</title>
 
 <style>
 * {
@@ -13,904 +13,342 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     font-family: Georgia, serif;
     color: white;
     min-height: 100vh;
     background:
-        linear-gradient(rgba(15,0,20,.78), rgba(15,0,20,.90)),
-        url("background.png") center top / cover fixed no-repeat;
-    overflow-x: hidden;
+        linear-gradient(rgba(20, 0, 15, 0.68), rgba(20, 0, 15, 0.82)),
+        url("background.jfif") center/cover fixed;
+    text-align: center;
 }
 
-.container {
-    width: 92%;
-    max-width: 950px;
-    margin: auto;
-    padding: 20px 10px 60px;
+header {
+    padding: 25px 15px;
 }
 
 .language {
-    text-align: right;
-}
-
-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 10px 15px;
     border: none;
-    border-radius: 30px;
-    padding: 13px 20px;
-    margin: 7px;
-    cursor: pointer;
-    font-size: 15px;
-    transition: .3s;
-}
-
-button:hover {
-    transform: scale(1.06);
-    box-shadow: 0 0 20px #ff69b4;
-}
-
-.pink {
-    background: linear-gradient(45deg,#ff287d,#ff9acb);
-    color: #39051f;
-    font-weight: bold;
-}
-
-.gold {
-    background: linear-gradient(45deg,#e9b84c,#ffe5a0);
-    color: #442b00;
-    font-weight: bold;
-}
-
-.purple {
-    background: linear-gradient(45deg,#974acb,#d99cff);
+    border-radius: 20px;
+    background: #ff4f87;
     color: white;
-    font-weight: bold;
+    cursor: pointer;
 }
 
-.lang-btn {
-    background: #ffe0f0;
-    color: #4b1740;
-}
-
-.hero {
-    min-height: 430px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 45px 10px;
-    text-shadow: 0 0 15px #ff4d94;
-}
-
-.hero h1 {
-    font-size: clamp(42px, 9vw, 75px);
-    color: #ffd5e8;
-    margin: 15px 0;
-}
-
-.hero p {
-    font-size: 19px;
-    line-height: 1.8;
-    max-width: 650px;
-}
-
-.heart {
-    font-size: 65px;
-    animation: heartbeat 1.3s infinite;
-}
-
-@keyframes heartbeat {
-    0%,100% { transform: scale(1); }
-    50% { transform: scale(1.2); }
-}
-
-.card {
-    background: rgba(22,0,30,.82);
-    border: 1px solid rgba(255,180,220,.5);
-    border-radius: 22px;
-    padding: 28px 18px;
+section {
+    max-width: 850px;
     margin: 25px auto;
-    box-shadow: 0 0 25px rgba(255,50,140,.18);
-    backdrop-filter: blur(8px);
+    padding: 30px 20px;
+    width: 92%;
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+
+h1 {
+    color: #ffb6d0;
+    font-size: clamp(38px, 8vw, 65px);
+    margin: 20px 0;
 }
 
 h2 {
-    color: #ffc6e4;
+    color: #ffb6d0;
     margin-bottom: 18px;
 }
 
-.message {
-    font-size: 18px;
-    line-height: 1.9;
-    color: #fff0f7;
-    margin: 15px auto;
-    max-width: 700px;
-}
-
-.small {
-    color: #e6c8df;
-    font-size: 14px;
-    line-height: 1.7;
-}
-
-.section-number {
-    color: #ff9bc9;
-    font-size: 12px;
-    letter-spacing: 3px;
-    margin-bottom: 12px;
-}
-
-.letter {
-    display: inline-block;
-    background: rgba(255,255,255,.12);
-    border: 1px solid #f4a8d0;
-    padding: 14px 18px;
-    border-radius: 16px;
-    margin: 7px;
-    color: white;
-}
-
-.result {
-    color: #ffe0f0;
-    font-size: 19px;
+p {
     line-height: 1.8;
-    margin-top: 18px;
+    margin: 12px 0;
 }
 
-.hidden {
-    display: none;
+button {
+    background: #ff4f87;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    margin: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff80a8;
+    transform: scale(1.05);
 }
 
 input, textarea {
     width: 90%;
-    max-width: 500px;
-    padding: 14px;
+    max-width: 450px;
+    padding: 13px;
+    border: none;
     border-radius: 12px;
-    border: 1px solid #e9a6ce;
     margin: 10px;
-    font-size: 16px;
-    font-family: inherit;
+    font-size: 15px;
 }
 
-textarea {
-    min-height: 110px;
-    resize: vertical;
-}
-
-footer {
-    margin-top: 45px;
-    color: #ffd5e8;
-    line-height: 2;
-    text-shadow: 0 0 10px #ff4d94;
-}
-
-.floating-heart {
+.heart {
     position: fixed;
-    bottom: -35px;
-    animation: floatUp 5s linear forwards;
+    bottom: -30px;
+    animation: float 7s linear infinite;
     pointer-events: none;
-    z-index: 10;
+    z-index: -1;
 }
 
-@keyframes floatUp {
+@keyframes float {
     to {
         transform: translateY(-110vh) rotate(360deg);
         opacity: 0;
     }
 }
 
-@media(max-width:600px) {
-    .hero {
-        min-height: 350px;
-    }
+#message, #answer, #wishResult {
+    color: #ffd0df;
+    font-size: 18px;
+    margin-top: 18px;
+}
 
-    .card {
-        padding: 23px 12px;
-    }
-
-    button {
-        font-size: 14px;
-    }
-
-    body {
-        background-attachment: scroll;
-    }
+footer {
+    padding: 30px 10px;
+    color: #ffc4d8;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<button class="language" onclick="changeLanguage()">አማርኛ / English</button>
 
-    <div class="language">
-        <button class="lang-btn" onclick="changeLanguage()">
-            🌍 Amharic / English
-        </button>
-    </div>
+<header>
+    <p id="topText">A little surprise made with love</p>
+    <h1>For Makiye ❤️</h1>
+    <p id="subtitle">Someone special deserves something special.</p>
+</header>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="heart">❤️</div>
+<section>
+    <h2 id="welcomeTitle">Welcome, My Makiye ❤️</h2>
+    <p id="welcomeText">
+        I made this little website just for you.
+        Every part of it carries a small piece of my heart.
+        I hope it makes you smile.
+    </p>
+    <button onclick="showLove()" id="loveButton">Open My Heart ❤️</button>
+    <p id="message"></p>
+</section>
 
-        <h1 id="mainTitle">For Makiye</h1>
+<section>
+    <h2 id="lettersTitle">💌 Open When...</h2>
+    <p id="lettersDescription">Choose a letter. It has a message for you.</p>
 
-        <p id="intro">
-            Welcome to my little world.
-            I created this special place just for you.
-            Full of love, smiles and beautiful surprises.
-        </p>
+    <button onclick="letter(0)" id="letter1">When you are sad</button>
+    <button onclick="letter(1)" id="letter2">When you miss me</button>
+    <button onclick="letter(2)" id="letter3">When you are happy</button>
+    <p id="letterMessage"></p>
+</section>
 
-        <button class="pink" onclick="showHearts()">
-            Open My Love World ❤️
-        </button>
-    </section>
+<section>
+    <h2 id="reasonsTitle">💕 Reasons I Adore You</h2>
+    <p id="reasonText">Here is one reason...</p>
+    <button onclick="nextReason()" id="reasonButton">Give me another reason</button>
+</section>
 
-    <!-- LOVE MESSAGE -->
-    <div class="card">
-        <h2 id="welcomeTitle">A Message From My Heart 💌</h2>
+<section>
+    <h2 id="momentsTitle">✨ A Special Moment</h2>
+    <p id="momentText">Some people make ordinary days beautiful.</p>
+    <button onclick="nextMoment()" id="momentButton">Next Moment</button>
+</section>
 
-        <p class="message" id="welcome">
-            Makiye, you are someone special.
-            Your smile makes ordinary days beautiful.
-            I hope this little surprise brings happiness to your heart.
-            ❤️
-        </p>
+<section>
+    <h2 id="quizTitle">❤️ A Little Love Game</h2>
+    <p id="question">Who is the most special person here?</p>
+    <button onclick="answerQuiz(0)" id="option1">Makiye</button>
+    <button onclick="answerQuiz(1)" id="option2">Someone else</button>
+    <p id="answer"></p>
+</section>
 
-        <button class="pink" onclick="showHearts()">
-            Send Me Some Love ❤️
-        </button>
-    </div>
+<section>
+    <h2 id="wishTitle">🌟 Make a Wish</h2>
+    <p id="wishDescription">Write a little wish for the future.</p>
+    <textarea id="wishInput" rows="3" placeholder="Write your wish here..."></textarea>
+    <br>
+    <button onclick="makeWish()" id="wishButton">Send Your Wish ❤️</button>
+    <p id="wishResult"></p>
+</section>
 
-    <!-- OPEN WHEN LETTERS -->
-    <div class="card">
-        <p class="section-number">01 · SPECIAL LETTERS</p>
+<section>
+    <h2 id="secretTitle">🔐 A Little Secret</h2>
+    <p id="secretDescription">There is something I want you to know.</p>
+    <button onclick="revealSecret()" id="secretButton">Reveal My Secret</button>
+    <p id="secretMessage"></p>
+</section>
 
-        <h2 id="lettersTitle">Open When... 💌</h2>
+<section>
+    <h2 id="finalTitle">❤️ One Last Thing</h2>
+    <p id="finalText">
+        No website can explain everything I feel.
+        But I hope this little creation reminds you
+        how special you are to me.
+    </p>
+    <button onclick="finalSurprise()" id="finalButton">One More Surprise 💝</button>
+    <p id="finalMessage"></p>
+</section>
 
-        <p class="small" id="lettersHint">
-            Choose a letter. There is a special message for you.
-        </p>
-
-        <button class="letter" onclick="openLetter('sad')">
-            🥺 When You Feel Sad
-        </button>
-
-        <button class="letter" onclick="openLetter('miss')">
-            💭 When You Miss Me
-        </button>
-
-        <button class="letter" onclick="openLetter('smile')">
-            😊 When You Need a Smile
-        </button>
-
-        <button class="letter" onclick="openLetter('happy')">
-            🌸 When You Feel Happy
-        </button>
-
-        <p class="result" id="letterResult"></p>
-    </div>
-
-    <!-- 100 REASONS -->
-    <div class="card">
-        <p class="section-number">02 · LITTLE REASONS</p>
-
-        <h2 id="reasonsTitle">100 Reasons I Adore You ❤️</h2>
-
-        <p class="small" id="reasonsHint">
-            Press the button to discover another reason.
-        </p>
-
-        <p class="result" id="reasonResult">
-            Your first reason is waiting...
-        </p>
-
-        <button class="pink" onclick="nextReason()">
-            Give Me Another Reason 💕
-        </button>
-
-        <p class="small" id="reasonCount">Reason 0 of 100</p>
-    </div>
-
-    <!-- SPECIAL MOMENTS -->
-    <div class="card">
-        <p class="section-number">03 · OUR MEMORIES</p>
-
-        <h2 id="momentsTitle">Our Special Moments 🌙</h2>
-
-        <p class="message" id="momentsText">
-            Every beautiful story has little moments worth remembering.
-            A conversation, a laugh, or a simple hello.
-            Let's create more beautiful memories together. ❤️
-        </p>
-
-        <button class="purple" onclick="showMoment()">
-            Show Me a Sweet Thought ✨
-        </button>
-
-        <p class="result" id="momentResult"></p>
-    </div>
-
-    <!-- LOVE QUIZ -->
-    <div class="card">
-        <p class="section-number">04 · INTERACTIVE LOVE GAME</p>
-
-        <h2 id="quizTitle">A Little Love Quiz 🎮</h2>
-
-        <p class="message" id="question"></p>
-
-        <div id="answers"></div>
-
-        <p class="result" id="quizResult"></p>
-
-        <button class="gold" onclick="nextQuestion()">
-            Next Question ➜
-        </button>
-
-        <p class="small" id="quizCount">Question 1 of 5</p>
-    </div>
-
-    <!-- MAKE A WISH -->
-    <div class="card">
-        <p class="section-number">05 · YOUR DREAMS</p>
-
-        <h2 id="wishTitle">Make a Wish ✨</h2>
-
-        <p class="message" id="wishHint">
-            Close your eyes for a moment.
-            Think of something beautiful you wish for.
-            Then write it here.
-        </p>
-
-        <textarea id="wishInput"
-            placeholder="Write your beautiful wish here..."></textarea>
-
-        <br>
-
-        <button class="purple" onclick="makeWish()">
-            Send My Wish to the Stars 🌟
-        </button>
-
-        <p class="result" id="wishResult"></p>
-
-        <p class="small">
-            Your wish stays on this page. It is not sent to anyone.
-        </p>
-    </div>
-
-    <!-- LOVE DECLARATION -->
-    <div class="card">
-        <p class="section-number">06 · FROM MY HEART</p>
-
-        <h2 id="loveTitle">Something I Want You to Know 💖</h2>
-
-        <p class="message" id="loveMessage">
-            I may not always find the perfect words,
-            but I want you to know that you are appreciated.
-            Your happiness matters.
-            Your smile matters.
-            You deserve beautiful things in life.
-            ❤️
-        </p>
-
-        <button class="pink" onclick="revealSecret()">
-            One More Little Secret 💌
-        </button>
-
-        <p class="result hidden" id="secret">
-            If I could give you one thing,
-            it would be the ability to see yourself through my eyes,
-            so you could understand how special you are. ❤️
-        </p>
-    </div>
-
-    <!-- FINAL SURPRISE -->
-    <div class="card">
-        <h2 id="finalTitle">One Last Surprise 🎁</h2>
-
-        <p class="message" id="finalText">
-            Thank you for visiting my little world, Makiye.
-            Keep smiling and never forget how special you are.
-        </p>
-
-        <button class="gold" onclick="finalSurprise()">
-            Open Your Surprise 🎁
-        </button>
-
-        <p class="result" id="finalResult"></p>
-    </div>
-
-    <footer>
-        <div>Made with ❤️, just for you.</div>
-        <div>Designed by me, with love.</div>
-        <div>Forever keep smiling, Makiye. 🌹</div>
-    </footer>
-
-</div>
+<footer>
+    <p>Made with ❤️ especially for Makiye</p>
+    <p>From someone who wants to see you smile.</p>
+</footer>
 
 <script>
-
 let isAmharic = false;
-let reasonNumber = 0;
-let questionNumber = 0;
-let quizAnswered = false;
 
 const reasons = [
-"Your beautiful smile.",
-"Your happiness makes the world brighter.",
-"You are one of a kind.",
-"You make ordinary moments special.",
-"You deserve all the happiness in the world.",
-"Your kindness is beautiful.",
-"You have a lovely personality.",
-"You make people feel special.",
-"You are stronger than you think.",
-"You bring sunshine into ordinary days.",
-"Your laughter is contagious.",
-"You are worth appreciating.",
-"You have a beautiful heart.",
-"You make life more colorful.",
-"You deserve respect and kindness.",
-"You have your own special magic.",
-"You make simple moments memorable.",
-"You are important.",
-"You deserve to be loved.",
-"You are wonderfully unique.",
-"Your smile is a little sunshine.",
-"You have a special place in this world.",
-"You make people happy.",
-"You are a reason to smile.",
-"You deserve beautiful memories.",
-"You have a lovely spirit.",
-"You are more special than you know.",
-"You make the world a little sweeter.",
-"You deserve good things.",
-"You should always believe in yourself.",
-"Your dreams are worth chasing.",
-"You deserve good days.",
-"You have so much potential.",
-"You are precious.",
-"Your presence makes a difference.",
-"You have a beautiful way of being you.",
-"You are worthy of every good thing.",
-"You deserve peaceful days.",
-"You make the little things meaningful.",
-"You are amazing in your own way.",
-"Your smile can change someone's day.",
-"You are a gift to this world.",
-"You deserve endless laughter.",
-"You make happiness feel closer.",
-"You are truly special.",
-"You have a wonderful heart.",
-"You deserve to shine.",
-"You make life feel warmer.",
-"You are unforgettable.",
-"You are enough, exactly as you are.",
-"You deserve kindness every day.",
-"You have a beautiful future ahead.",
-"You are full of possibilities.",
-"You deserve to feel appreciated.",
-"You make the world more beautiful.",
-"You are worth every kind word.",
-"You have lovely energy.",
-"You deserve a thousand smiles.",
-"You make a difference just by being you.",
-"You are a beautiful soul.",
-"You deserve peace and happiness.",
-"You are special without even trying.",
-"You make small things feel magical.",
-"You deserve a life full of joy.",
-"You have a reason to be proud of yourself.",
-"You are stronger than yesterday.",
-"You deserve sweet surprises.",
-"You are worth celebrating.",
-"You have a heart worth protecting.",
-"You deserve to be understood.",
-"You make every smile meaningful.",
-"You are more than enough.",
-"You deserve love and peace.",
-"You are a wonderful person.",
-"You make life a little brighter.",
-"You deserve to follow your dreams.",
-"You are a masterpiece in your own way.",
-"You deserve to laugh freely.",
-"You are someone worth knowing.",
-"You make ordinary days memorable.",
-"You deserve to feel special.",
-"You have a light of your own.",
-"You deserve beautiful beginnings.",
-"You are a reason for gratitude.",
-"You make the world less ordinary.",
-"You deserve sincere happiness.",
-"You are a lovely person.",
-"You deserve good memories.",
-"You are important.",
-"You have so much to offer.",
-"You deserve a heart full of peace.",
-"You are one of life's little wonders.",
-"You deserve to be celebrated.",
-"You make the world brighter.",
-"You are appreciated.",
-"Simply because you are Makiye. ❤️"
+    "Your smile makes ordinary days beautiful.",
+    "You bring happiness into little moments.",
+    "You are special in your own way.",
+    "Your laughter is one of my favorite sounds.",
+    "You make life feel a little brighter.",
+    "I appreciate the person you are.",
+    "You deserve kindness and happiness.",
+    "You make me smile without even trying.",
+    "There is only one Makiye, and she is special.",
+    "You are worth every little effort."
 ];
 
-const reasonsAm = [
-"ፈገግታሽ ውብ ነው።",
-"ደስታሽ ዓለምን ያበራል።",
-"አንቺ ልዩ ነሽ።",
-"ተራ ጊዜዎችን ልዩ ታደርጊያለሽ።",
-"ደስታ ይገባሻል።",
-"ደግነትሽ ያምራል።",
-"ውብ ባህሪ አለሽ።",
-"ሰዎችን ልዩ እንዲሰማቸው ታደርጊያለሽ።",
-"ከምታስቢው በላይ ጠንካራ ነሽ።",
-"ቀኖችን በደስታ ታበሪያለሽ።",
-"ሳቅሽ ደስታን ያስተላልፋል።",
-"አድናቆት ይገባሻል።",
-"ቆንጆ ልብ አለሽ።",
-"ሕይወትን በቀለም ትሞሊያለሽ።",
-"ክብርና ደግነት ይገባሻል።",
-"የራስሽ ልዩ አስማት አለሽ።",
-"ትንንሽ ጊዜዎችን ትዝታ ታደርጊያለሽ።",
-"አንቺ ጠቃሚ ሰው ነሽ።",
-"መወደድ ይገባሻል።",
-"በጣም ልዩ ነሽ።",
-"ፈገግታሽ የፀሐይ ብርሃን ነው።",
-"በዚህ ዓለም ልዩ ቦታ አለሽ።",
-"ሰዎችን ደስ ታሰኚያለሽ።",
-"ፈገግ ለማለት ምክንያት ነሽ።",
-"ቆንጆ ትዝታዎች ይገባሻል።",
-"ውብ መንፈስ አለሽ።",
-"ከምታስቢው በላይ ልዩ ነሽ።",
-"ዓለምን የበለጠ ጣፋጭ ታደርጊያለሽ።",
-"መልካም ነገሮች ይገባሻል።",
-"በራስሽ ማመን አለብሽ።",
-"ህልሞችሽን መከተል ይገባሻል።",
-"መልካም ቀናት ይገባሻል።",
-"ብዙ ችሎታ አለሽ።",
-"ውድ ሰው ነሽ።",
-"መኖርሽ ለውጥ ያመጣል።",
-"አንቺ ራስሽ መሆንሽ ያምራል።",
-"መልካም ነገር ሁሉ ይገባሻል።",
-"ሰላማዊ ቀናት ይገባሻል።",
-"ትንንሽ ነገሮችን ትርጉም ታላብሻለሽ።",
-"በራስሽ መንገድ ግሩም ነሽ።",
-"ፈገግታሽ የአንድን ሰው ቀን ሊያሳምር ይችላል።",
-"ለዓለም ስጦታ ነሽ።",
-"ማለቂያ የሌለው ሳቅ ይገባሻል።",
-"ደስታን ታቀርቢያለሽ።",
-"በእውነት ልዩ ነሽ።",
-"ድንቅ ልብ አለሽ።",
-"መብራት ይገባሻል።",
-"ሕይወትን ሞቅ ታደርጊያለሽ።",
-"የማትረሳ ሰው ነሽ።",
-"አንቺ በቂ ነሽ።",
-"ደግነት ይገባሻል።",
-"ቆንጆ ወደፊት አለሽ።",
-"ብዙ እድሎች አሉሽ።",
-"አድናቆት ይገባሻል።",
-"ዓለምን የበለጠ ውብ ታደርጊያለሽ።",
-"ጥሩ ቃላት ይገባሻል።",
-"ውብ ኃይል አለሽ።",
-"ብዙ ፈገግታዎች ይገቡሻል።",
-"አንቺ በመሆንሽ ብቻ ልዩ ነሽ።",
-"ውብ ነፍስ አለሽ።",
-"ሰላምና ደስታ ይገባሻል።",
-"ሳትጥሪ ልዩ ነሽ።",
-"ትንንሽ ነገሮችን አስማታዊ ታደርጊያለሽ።",
-"በደስታ የተሞላ ሕይወት ይገባሻል።",
-"በራስሽ መኩራት አለብሽ።",
-"ከትናንት የበለጠ ጠንካራ ነሽ።",
-"ጣፋጭ ድንገተኛ ስጦታዎች ይገቡሻል።",
-"ልዩ በዓል ይገባሻል።",
-"ልብሽ መጠበቅ ይገባዋል።",
-"መረዳት ይገባሻል።",
-"ፈገግታሽ ትርጉም አለው።",
-"አንቺ በቂ ነሽ።",
-"ፍቅርና ሰላም ይገባሻል።",
-"ድንቅ ሰው ነሽ።",
-"ሕይወትን ታበሪያለሽ።",
-"ህልሞችሽን መከተል ይገባሻል።",
-"በራስሽ መንገድ ውብ ነሽ።",
-"በነፃነት መሳቅ ይገባሻል።",
-"ሊታወቅሽ የሚገባ ሰው ነሽ።",
-"ተራ ቀኖችን ትዝታ ታደርጊያለሽ።",
-"ልዩ መሰማት ይገባሻል።",
-"የራስሽ ብርሃን አለሽ።",
-"ቆንጆ አዲስ ጅማሬዎች ይገቡሻል።",
-"ምስጋና የሚገባሽ ሰው ነሽ።",
-"ዓለምን የተለየች ታደርጊያለሽ።",
-"እውነተኛ ደስታ ይገባሻል።",
-"ውብ ሰው ነሽ።",
-"ጥሩ ትዝታዎች ይገቡሻል።",
-"አስፈላጊ ሰው ነሽ።",
-"ብዙ ነገር ልትሰጪ ትችያለሽ።",
-"የልብ ሰላም ይገባሻል።",
-"ከሕይወት ትንንሽ ተዓምራት አንዷ ነሽ።",
-"ማድነቅ ይገባሻል።",
-"ዓለምን ታበሪያለሽ።",
-"አድናቆት ይገባሻል።",
-"ማኪዬ ስለሆንሽ ብቻ ልዩ ነሽ። ❤️"
+const amharicReasons = [
+    "ፈገግታሽ ተራ ቀንን ውብ ያደርገዋል።",
+    "በትንንሽ ነገሮች ደስታን ታመጫለሽ።",
+    "በራስሽ መንገድ ልዩ ነሽ።",
+    "ሳቅሽ ከምወዳቸው ድምፆች አንዱ ነው።",
+    "ሕይወትን ትንሽ የበለጠ ብሩህ ታደርጊያለሽ።",
+    "ለማንነትሽ አከብርሻለሁ።",
+    "ደግነትና ደስታ ይገባሻል።",
+    "ምንም ሳታደርጊ ፈገግ ታሰኝኛለሽ።",
+    "አንድ ማኪዬ ብቻ አለች፤ እሷም ልዩ ናት።",
+    "ለአንቺ የሚደረግ ትንሽ ጥረት ሁሉ ዋጋ አለው።"
 ];
-
-const letters = {
-sad: "When you feel sad, remember that difficult moments do not last forever. You deserve peace, kindness and a reason to smile. ❤️",
-miss: "If you miss me, remember that someone made this little website just to make you smile. 💕",
-smile: "Smile! You look better when you are happy. You are special. 😊",
-happy: "When you are happy, enjoy every second. I hope you have many more days like this. 🌸"
-};
-
-const lettersAm = {
-sad: "ስታዝኚ አስታውሺ፤ ከባድ ጊዜዎች ለዘላለም አይቆዩም። ሰላምና ደስታ ይገባሻል። ❤️",
-miss: "ስትናፍቂኝ ይህን አስታውሺ፤ ፈገግ እንድትይ ይህን ድረገጽ የሰራልሽ አንድ ሰው አለ። 💕",
-smile: "ፈገግ በይ! ደስተኛ ስትሆኚ በጣም ታምሪያለሽ። 😊",
-happy: "ደስተኛ ስትሆኚ በዚያ ደስታ ተደሰቺ። ብዙ ደስተኛ ቀናት ይኑሩሽ። 🌸"
-};
 
 const moments = [
-"Maybe our best memories are still waiting to happen. ❤️",
-"One day, we will look back and smile at the little moments.",
-"Sometimes a simple conversation becomes a beautiful memory.",
-"Every special story begins with small moments.",
-"Let's make more memories worth smiling about. 🌹"
+    "Some people make ordinary days beautiful.",
+    "A simple smile can become a beautiful memory.",
+    "The little things are sometimes the biggest things.",
+    "May your days always be filled with happiness."
 ];
 
-const momentsAm = [
-"ምናልባት ምርጥ ትዝታዎቻችን ገና ወደፊት ይጠብቁናል። ❤️",
-"አንድ ቀን ትንንሽ ጊዜዎቻችንን እያሰብን ፈገግ እንላለን።",
-"አንዳንዴ ቀላል ውይይት ውብ ትዝታ ይሆናል።",
-"ልዩ ታሪኮች በትንንሽ ጊዜዎች ይጀምራሉ።",
-"ፈገግ የሚያሰኙ ብዙ ትዝታዎችን እንፍጠር። 🌹"
+const amharicMoments = [
+    "አንዳንድ ሰዎች ተራ ቀናትን ውብ ያደርጋሉ።",
+    "ቀላል ፈገግታ ውብ ትዝታ ሊሆን ይችላል።",
+    "አንዳንዴ ትንንሾቹ ነገሮች ትልቅ ትርጉም አላቸው።",
+    "ቀኖችሽ ሁልጊዜ በደስታ ይሞሉ።"
 ];
 
-const questions = [
-{
-q: "What makes a day more beautiful?",
-a: ["A beautiful smile 😊", "A rainy Monday 🌧️", "A broken phone 📱"],
-am: "ቀንን የሚያሳምረው ምንድነው?",
-amA: ["ቆንጆ ፈገግታ 😊", "ዝናባማ ሰኞ 🌧️", "የተሰበረ ስልክ 📱"],
-correct: 0,
-reply: "Exactly! A beautiful smile can brighten the whole day! ❤️",
-replyAm: "ትክክል! ቆንጆ ፈገግታ ቀንን ያበራል! ❤️"
-},
-{
-q: "What is a sweet surprise?",
-a: ["A kind message 💌", "A lost shoe 👟", "A flat battery 🔋"],
-am: "ጣፋጭ ድንገተኛ ስጦታ ምንድነው?",
-amA: ["ጥሩ መልዕክት 💌", "የጠፋ ጫማ 👟", "ባዶ ባትሪ 🔋"],
-correct: 0,
-reply: "Correct! A few kind words can mean everything. 💕",
-replyAm: "ትክክል! ጥቂት ጥሩ ቃላት ብዙ ትርጉም አላቸው። 💕"
-},
-{
-q: "What should you never forget?",
-a: ["You are special ❤️", "Your homework 📚", "The Wi-Fi password 📶"],
-am: "ፈጽሞ መርሳት የሌለብሽ ምንድነው?",
-amA: ["ልዩ መሆንሽን ❤️", "የቤት ስራሽን 📚", "የWi-Fi ፓስወርድ 📶"],
-correct: 0,
-reply: "Never forget how special you are! 🥰",
-replyAm: "ምን ያህል ልዩ እንደሆንሽ አትርሺ! 🥰"
-},
-{
-q: "What is more beautiful?",
-a: ["Kindness and love 🌹", "A broken chair 🪑", "An empty box 📦"],
-am: "የበለጠ ውብ የሆነው ምንድነው?",
-amA: ["ደግነትና ፍቅር 🌹", "የተሰበረ ወንበር 🪑", "ባዶ ሳጥን 📦"],
-correct: 0,
-reply: "Yes! Kindness makes the world beautiful. ✨",
-replyAm: "አዎ! ደግነት ዓለምን ያሳምራል። ✨"
-},
-{
-q: "What should Makiye do every day?",
-a: ["Keep smiling 😊", "Stop dreaming", "Forget happiness"],
-am: "ማኪዬ በየቀኑ ምን ማድረግ አለባት?",
-amA: ["ፈገግ ማለት 😊", "ህልም መተው", "ደስታን መርሳት"],
-correct: 0,
-reply: "Perfect! Keep smiling, Makiye! ❤️",
-replyAm: "በጣም ጥሩ! ማኪዬ ሁሌም ፈገግ በይ! ❤️"
-}
-];
+let reasonIndex = 0;
+let momentIndex = 0;
 
-function createHearts() {
-    const emojis = ["❤️","💕","💖","💗","🌹","✨"];
-
-    for (let i = 0; i < 12; i++) {
-        const heart = document.createElement("div");
-        heart.className = "floating-heart";
-        heart.textContent =
-            emojis[Math.floor(Math.random() * emojis.length)];
-
-        heart.style.left = Math.random() * 100 + "vw";
-        heart.style.fontSize = (18 + Math.random() * 25) + "px";
-        heart.style.animationDuration = (3 + Math.random() * 3) + "s";
-
-        document.body.appendChild(heart);
-        setTimeout(() => heart.remove(), 6500);
-    }
-}
-
-function showHearts() {
-    createHearts();
-
-    document.getElementById("welcome").textContent =
+function showLove() {
+    document.getElementById("message").textContent =
         isAmharic
-        ? "ልዩ መሆንሽን አትርሺ። ብዙ ልቦች ለአንቺ! ❤️"
-        : "A little love is flying your way! Never forget how special you are. ❤️";
+        ? "ማኪዬ፣ ለአንቺ ይህን ትንሽ ዓለም በፍቅር ሠራሁት። ❤️"
+        : "Makiye, I created this little world with love, just for you. ❤️";
 }
 
-function openLetter(type) {
-    document.getElementById("letterResult").textContent =
-        isAmharic ? lettersAm[type] : letters[type];
+function letter(number) {
+    const english = [
+        "Even on difficult days, remember that you deserve happiness and peace. ❤️",
+        "I hope this little message makes you feel close to me. 💌",
+        "Keep smiling. Your happiness is beautiful. 🌸"
+    ];
 
-    createHearts();
+    const amharic = [
+        "በአስቸጋሪ ቀናትም ቢሆን ደስታና ሰላም እንደሚገባሽ አትርሺ። ❤️",
+        "ይህ ትንሽ መልዕክት ከእኔ ጋር ቅርብ እንደሆንሽ እንዲሰማሽ ተስፋ አደርጋለሁ። 💌",
+        "ፈገግታሽን ጠብቂ። ደስታሽ ውብ ነው። 🌸"
+    ];
+
+    document.getElementById("letterMessage").textContent =
+        isAmharic ? amharic[number] : english[number];
 }
 
 function nextReason() {
-    reasonNumber++;
+    document.getElementById("reasonText").textContent =
+        isAmharic ? amharicReasons[reasonIndex] : reasons[reasonIndex];
 
-    if (reasonNumber > 100) reasonNumber = 1;
-
-    document.getElementById("reasonResult").textContent =
-        (isAmharic ? "ምክንያት " : "Reason ") +
-        reasonNumber + ": " +
-        (isAmharic ? reasonsAm[reasonNumber - 1] : reasons[reasonNumber - 1]);
-
-    document.getElementById("reasonCount").textContent =
-        "Reason " + reasonNumber + " of 100";
-
-    createHearts();
+    reasonIndex = (reasonIndex + 1) % reasons.length;
 }
 
-function showMoment() {
-    const i = Math.floor(Math.random() * moments.length);
+function nextMoment() {
+    document.getElementById("momentText").textContent =
+        isAmharic ? amharicMoments[momentIndex] : moments[momentIndex];
 
-    document.getElementById("momentResult").textContent =
-        isAmharic ? momentsAm[i] : moments[i];
-
-    createHearts();
+    momentIndex = (momentIndex + 1) % moments.length;
 }
 
-function loadQuestion() {
-    const q = questions[questionNumber];
-
-    document.getElementById("question").textContent =
-        isAmharic ? q.am : q.q;
-
-    const answers = document.getElementById("answers");
-    answers.innerHTML = "";
-
-    const choices = isAmharic ? q.amA : q.a;
-
-    choices.forEach((answer, index) => {
-        const button = document.createElement("button");
-        button.className = "letter";
-        button.textContent = answer;
-        button.onclick = () => answerQuiz(index);
-        answers.appendChild(button);
-    });
-
-    document.getElementById("quizResult").textContent = "";
-    quizAnswered = false;
-
-    document.getElementById("quizCount").textContent =
-        (isAmharic ? "ጥያቄ " : "Question ") +
-        (questionNumber + 1) + " of 5";
-}
-
-function answerQuiz(index) {
-    if (quizAnswered) return;
-
-    quizAnswered = true;
-
-    const q = questions[questionNumber];
-
-    if (index === q.correct) {
-        document.getElementById("quizResult").textContent =
-            isAmharic ? q.replyAm : q.reply;
-
-        createHearts();
-    } else {
-        document.getElementById("quizResult").textContent =
-            isAmharic
-            ? "ጥሩ ሙከራ! በሚቀጥለው ጥያቄ እንሞክር። 😊"
-            : "Nice try! Let's try the next question. 😊";
-    }
-}
-
-function nextQuestion() {
-    questionNumber++;
-
-    if (questionNumber >= questions.length) {
-        questionNumber = 0;
-
-        document.getElementById("quizResult").textContent =
-            isAmharic
-            ? "ጨዋታውን ጨረስሽ! እንኳን ደስ አለሽ! 🎉"
-            : "You completed the quiz! Well done, Makiye! 🎉";
-
-        createHearts();
-    }
-
-    loadQuestion();
+function answerQuiz(option) {
+    document.getElementById("answer").textContent =
+        option === 0
+        ? (isAmharic ? "ትክክለኛው መልስ! ማኪዬ ነች! ❤️" : "Correct answer! It's Makiye! ❤️")
+        : (isAmharic ? "እንደገና ሞክሪ! 😉" : "Try again! 😉");
 }
 
 function makeWish() {
     const wish = document.getElementById("wishInput").value.trim();
 
-    if (!wish) {
-        document.getElementById("wishResult").textContent =
-            isAmharic ? "እባክሽ ምኞትሽን ጻፊ። ✨" :
-            "Please write your wish first. ✨";
-        return;
-    }
-
     document.getElementById("wishResult").textContent =
-        isAmharic
-        ? "ቆንጆ ምኞት ነው! እውን እንዲሆን እመኛለሁ። 🌟"
-        : "That is a beautiful wish! I hope it comes true. 🌟";
-
-    createHearts();
+        wish
+        ? (isAmharic ? "ውይ! ምኞትሽ ይሳካ! ❤️" : "Beautiful wish! I hope it comes true! ❤️")
+        : (isAmharic ? "እባክሽ ምኞትሽን ጻፊ።" : "Please write your wish first.");
 }
 
 function revealSecret() {
-    document.getElementById("secret").classList.toggle("hidden");
-    createHearts();
+    document.getElementById("secretMessage").textContent =
+        isAmharic
+        ? "ምስጢሬ ይህ ነው፦ ይህን ድረ-ገጽ ስሠራ አንቺን እያሰብኩ ነበር። ❤️"
+        : "My secret is simple: I was thinking about you while making this website. ❤️";
 }
 
 function finalSurprise() {
-    document.getElementById("finalResult").textContent =
+    document.getElementById("finalMessage").textContent =
         isAmharic
-        ? "🎉 ማኪዬ! ይህ ትንሽ ዓለም ሁሉ ለአንቺ ነው። ሁሌም ፈገግ በይ! ❤️"
-        : "🎉 Makiye! This little world was made just for you. Keep smiling and remember that you are special! ❤️";
-
-    createHearts();
+        ? "ማኪዬ፣ ሁሌም ፈገግ በይ። ይህ ለአንቺ የተሠራ ትንሽ ስጦታ ነው! 💖"
+        : "Makiye, keep smiling. This little gift was made especially for you! 💖";
 }
 
 function changeLanguage() {
     isAmharic = !isAmharic;
 
     const translations = {
-        mainTitle: ["For Makiye", "ለማኪዬ"],
-        intro: [
-            "Welcome to my little world. I created this special place just for you. Full of love, smiles and beautiful surprises.",
-            "ወደ ትንሹ ዓለሜ እንኳን በደህና መጣሽ። ይህን ልዩ ቦታ ለአንቺ ሰራሁት። በፍቅር፣ በፈገግታና በድንገተኛ ስጦታዎች የተሞላ።"
-        ],
-        welcomeTitle: ["A Message From My Heart 💌", "ከልቤ የተላከ መልዕክት 💌"],
-        welcome: [
-            "Makiye, you are someone special. Your smile makes ordinary days beautiful. I hope this little surprise brings happiness to your heart. ❤️",
-            "ማኪዬ፣ ልዩ ሰው ነሽ። ፈገግታሽ ተራ ቀኖችን ያሳምራል። ይህ ትንሽ ስጦታ ልብሽን ደስ እንዲያሰኝ እመኛለሁ። ❤️"
-        ],
-        lettersTitle: ["Open When... 💌", "መቼ እንደሆነ ክፈቺ 💌"],
-        lettersHint: [
-            "Choose a letter. There is a special message for you.",
-            "አንዱን ደብዳቤ ምረጪ። ለአንቺ ልዩ መልዕክት አለው።"
-        ],
-        reasonsTitle: ["100 Reasons I Adore You ❤️", "ለምወድሽ 100 ምክንያቶች ❤️"],
-        reasonsHint: [
-            "Press the button to discover another reason.",
-            "ሌላ ምክንያት ለማወቅ ቁልፉን ተጫኚ።"
-        ],
-        momentsTitle: ["Our Special Moments 🌙", "ልዩ ትዝታዎቻችን 🌙"],
-        quizTitle: ["A Little Love Quiz 🎮", "ትንሽ የፍቅር ጨዋታ 🎮"],
-        wishTitle: ["Make a Wish ✨", "ምኞትሽን ጻፊ ✨"],
-        wishHint: [
-            "Close your eyes for a moment. Think of something beautiful you wish for. Then write it here.",
-            "ዓይኖችሽን ለአፍታ ጨፍኚ። ቆንጆ ምኞት አስቢና እዚህ ጻፊው።"
-        ],
-        loveTitle: ["Something I Want You to Know 💖", "ልታውቂው የምፈልገው ነገር 💖"],
-        loveMessage: [
-            "I may not always find the perfect words, but I want you to know that you are appreciated. Your happiness matters. Your smile matters. You deserve beautiful things in life. ❤️",
-            "ሁሌም ትክክለኛውን ቃል ላገኝ አልችልም፤ ግን ልዩ መሆንሽን እንድታውቂ እፈልጋለሁ። ደስታሽ ያስፈልጋል። ፈገግታሽ ያስፈልጋል። ቆንጆ ነገሮችም ይገቡሻል። ❤️"
-        ],
-        finalTitle: ["One Last Surprise 🎁", "የመጨረሻ ስጦታ 🎁"],
-        finalText: [
-            "Thank you for visiting my little world, Makiye. Keep smiling and never forget how special you are.",
-            "ትንሹን ዓለሜን ስለጎበኘሽ አመሰግናለሁ ማኪዬ። ሁሌም ፈገግ በይ፤ ልዩ መሆንሽን አትርሺ።"
-        ]
+        topText: ["A little surprise made with love", "በፍቅር የተሠራ ትንሽ ድንቅ ስጦታ"],
+        subtitle: ["Someone special deserves something special.", "ልዩ ሰው ልዩ ነገር ይገባዋል።"],
+        welcomeTitle: ["Welcome, My Makiye ❤️", "እንኳን ወደ ትንሹ ዓለሜ መጣሽ ማኪዬ ❤️"],
+        welcomeText: ["I made this little website just for you. Every part of it carries a small piece of my heart. I hope it makes you smile.", "ይህን ትንሽ ድረ-ገጽ ለአንቺ ብቻ ሠራሁት። በውስጡ የልቤ ትንሽ ክፍል አለበት። ፈገግ እንድትይ ተስፋ አደርጋለሁ።"],
+        loveButton: ["Open My Heart ❤️", "ልቤን ክፈቺ ❤️"],
+        lettersTitle: ["💌 Open When...", "💌 በሚከተሉት ጊዜ ክፈቺ..."],
+        lettersDescription: ["Choose a letter. It has a message for you.", "ደብዳቤ ምረጪ። ለአንቺ መልዕክት አለው።"],
+        letter1: ["When you are sad", "ስታዝኚ"],
+        letter2: ["When you miss me", "ስትናፍቂኝ"],
+        letter3: ["When you are happy", "ደስተኛ ስትሆኚ"],
+        reasonsTitle: ["💕 Reasons I Adore You", "💕 የምወድሽባቸው ምክንያቶች"],
+        reasonButton: ["Give me another reason", "ሌላ ምክንያት አሳዪኝ"],
+        momentsTitle: ["✨ A Special Moment", "✨ ልዩ ትዝታ"],
+        momentButton: ["Next Moment", "ቀጣይ ትዝታ"],
+        quizTitle: ["❤️ A Little Love Game", "❤️ ትንሽ የፍቅር ጨዋታ"],
+        question: ["Who is the most special person here?", "እዚህ በጣም ልዩ ሰው ማን ነው?"],
+        option1: ["Makiye", "ማኪዬ"],
+        option2: ["Someone else", "ሌላ ሰው"],
+        wishTitle: ["🌟 Make a Wish", "🌟 ምኞት ተመኚ"],
+        wishDescription: ["Write a little wish for the future.", "ለወደፊት ትንሽ ምኞትሽን ጻፊ።"],
+        wishButton: ["Send Your Wish ❤️", "ምኞትሽን ላኪ ❤️"],
+        secretTitle: ["🔐 A Little Secret", "🔐 ትንሽ ምስጢር"],
+        secretDescription: ["There is something I want you to know.", "እንድታውቂው የምፈልገው ነገር አለ።"],
+        secretButton: ["Reveal My Secret", "ምስጢሬን ክፈቺ"],
+        finalTitle: ["❤️ One Last Thing", "❤️ አንድ የመጨረሻ ነገር"],
+        finalText: ["No website can explain everything I feel. But I hope this little creation reminds you how special you are to me.", "የሚሰማኝን ሁሉ በድረ-ገጽ መግለጽ አይቻልም። ግን ይህ ትንሽ ስጦታ ለእኔ ምን ያህል ልዩ እንደሆንሽ እንዲያስታውስሽ እመኛለሁ።"],
+        finalButton: ["One More Surprise 💝", "ሌላ ድንቅ ነገር 💝"]
     };
 
     for (const id in translations) {
@@ -919,23 +357,28 @@ function changeLanguage() {
     }
 
     document.getElementById("wishInput").placeholder =
-        isAmharic ? "ቆንጆ ምኞትሽን እዚህ ጻፊ..." :
-        "Write your beautiful wish here...";
+        isAmharic ? "ምኞትሽን እዚህ ጻፊ..." : "Write your wish here...";
 
-    document.getElementById("secret").textContent =
-        isAmharic
-        ? "አንድ ነገር ልሰጥሽ ብችል፣ ራስሽን በእኔ ዓይን እንድታዪ እሰጥሽ ነበር። ምን ያህል ልዩ እንደሆንሽ ትረጂ ነበር። ❤️"
-        : "If I could give you one thing, it would be the ability to see yourself through my eyes, so you could understand how special you are. ❤️";
+    document.getElementById("reasonText").textContent =
+        isAmharic ? amharicReasons[0] : reasons[0];
 
-    loadQuestion();
+    document.getElementById("momentText").textContent =
+        isAmharic ? amharicMoments[0] : moments[0];
 }
 
-loadQuestion();
+// Floating hearts
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.textContent = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (12 + Math.random() * 20) + "px";
+    document.body.appendChild(heart);
 
-setInterval(() => {
-    if (Math.random() > 0.5) createHearts();
-}, 4500);
+    setTimeout(() => heart.remove(), 7000);
+}
 
+setInterval(createHeart, 900);
 </script>
 
 </body>
