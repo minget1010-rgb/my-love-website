@@ -4,13 +4,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A Little Love ❤️</title>
+
+<title>For Meklit ❤️</title>
 
 <style>
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -19,107 +20,137 @@ html {
 
 body {
   font-family: Georgia, serif;
-  background: #fff7f8;
-  color: #603344;
+  background: #100b16;
+  color: #fff0f5;
   overflow-x: hidden;
 }
 
 button {
   cursor: pointer;
-  border: 0;
+  border: none;
   font-family: inherit;
 }
 
 .topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 18px 7%;
-  background: white;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  box-shadow: 0 3px 15px #0000000a;
+  background: #160e20;
+  border-bottom: 1px solid #d5a64c44;
 }
 
 .logo {
-  color: #d63370;
-  font-size: 22px;
+  color: #e8bd70;
+  font-size: 23px;
   font-weight: bold;
 }
 
 .lang {
-  background: #ffe0eb;
-  color: #ad2458;
-  padding: 10px 18px;
+  background: #e8bd70;
+  color: #241326;
+  padding: 10px 20px;
   border-radius: 25px;
+  font-weight: bold;
 }
 
 .hero {
-  min-height: 85vh;
+  min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 35px 20px;
-  color: white;
+  padding: 40px 20px;
   background:
-    linear-gradient(#35101e77, #35101e77),
+    linear-gradient(#130b1dcc, #130b1dcc),
     url("https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=1600")
     center/cover;
 }
 
 .hero-content {
-  max-width: 750px;
+  max-width: 800px;
+}
+
+.heart-icon {
+  font-size: 65px;
+  margin-bottom: 20px;
+  animation: beat 1.5s infinite;
+}
+
+@keyframes beat {
+  50% { transform: scale(1.2); }
 }
 
 .hero h1 {
-  font-size: clamp(40px, 8vw, 75px);
-  margin-bottom: 20px;
+  font-size: clamp(42px, 8vw, 78px);
+  color: #f0c77c;
+  margin-bottom: 22px;
 }
 
 .hero p {
-  font-size: 19px;
+  font-size: 20px;
   line-height: 1.9;
+  color: #f7e8ed;
 }
 
 .main-btn {
   margin-top: 28px;
   padding: 15px 30px;
-  background: #e84d83;
-  color: white;
+  background: linear-gradient(135deg, #d9a84e, #f3d28c);
+  color: #271329;
   border-radius: 30px;
   font-size: 17px;
-  box-shadow: 0 5px 20px #0003;
+  font-weight: bold;
   transition: .3s;
 }
 
 .main-btn:hover {
   transform: translateY(-4px);
-  background: #c62c68;
+  box-shadow: 0 8px 25px #e8bd7066;
 }
 
 section {
-  padding: 75px 20px;
+  padding: 80px 20px;
   text-align: center;
 }
 
 .heading {
-  font-size: 34px;
-  color: #c52c69;
-  margin-bottom: 15px;
+  font-size: 35px;
+  color: #e8bd70;
+  margin-bottom: 18px;
 }
 
 .description {
+  color: #d9b9ca;
   line-height: 1.9;
-  color: #916779;
+}
+
+.letter-card {
+  max-width: 760px;
+  margin: 35px auto;
+  padding: 40px;
+  background: #21152a;
+  border: 1px solid #d5a64c66;
+  border-radius: 25px;
+  box-shadow: 0 10px 35px #0005;
+  line-height: 2.1;
+  font-size: 18px;
+  display: none;
+}
+
+.letter-card h2 {
+  color: #e8bd70;
+  margin: 15px 0;
 }
 
 .gallery {
   max-width: 1100px;
-  margin: 35px auto;
+  margin: 40px auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 22px;
 }
 
@@ -127,69 +158,69 @@ section {
   width: 100%;
   height: 320px;
   object-fit: cover;
-  border-radius: 22px;
-  box-shadow: 0 8px 25px #a74d6b22;
+  border-radius: 20px;
+  border: 2px solid #d5a64c55;
   transition: .4s;
 }
 
 .gallery img:hover {
-  transform: translateY(-8px) scale(1.02);
-}
-
-.letter-card {
-  max-width: 750px;
-  margin: 30px auto;
-  padding: 35px;
-  background: white;
-  border-radius: 25px;
-  box-shadow: 0 8px 35px #a74d6b22;
-  line-height: 2;
-  font-size: 18px;
-  display: none;
+  transform: scale(1.04);
 }
 
 .music-card {
-  max-width: 500px;
-  margin: 30px auto;
-  padding: 30px;
-  background: white;
+  max-width: 550px;
+  margin: 35px auto;
+  padding: 35px;
+  background: #21152a;
+  border: 1px solid #d5a64c66;
   border-radius: 25px;
-  box-shadow: 0 8px 30px #a74d6b20;
+}
+
+.music-card p {
+  color: #d9b9ca;
+  line-height: 1.8;
 }
 
 audio {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .question {
-  background: linear-gradient(135deg, #ffe1ed, #fff);
+  background: linear-gradient(135deg, #28142d, #170d20);
+}
+
+#answer {
+  color: #f0c77c;
+  margin-top: 25px;
+  line-height: 1.8;
 }
 
 footer {
-  background: #4c1d32;
-  color: white;
+  padding: 40px 20px;
   text-align: center;
-  padding: 35px;
-  line-height: 2;
+  background: #09060e;
+  color: #e8bd70;
+  line-height: 2.2;
 }
 
 #intro {
   position: fixed;
   inset: 0;
   z-index: 100;
-  background: linear-gradient(135deg, #651d43, #d94e83);
-  color: white;
+  background: linear-gradient(135deg, #170b24, #70294d);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 25px;
+  color: white;
 }
 
 .intro-content h1 {
-  font-size: clamp(35px, 8vw, 65px);
-  margin: 20px;
+  color: #f0c77c;
+  font-size: clamp(38px, 8vw, 65px);
+  margin: 20px 0;
 }
 
 .intro-content p {
@@ -212,26 +243,20 @@ footer {
 }
 
 @media(max-width: 600px) {
-  .hero {
-    min-height: 75vh;
-  }
+  .hero { min-height: 75vh; }
 
-  section {
-    padding: 55px 15px;
-  }
+  section { padding: 55px 15px; }
 
-  .heading {
-    font-size: 28px;
-  }
-
-  .gallery img {
-    height: 280px;
-  }
+  .heading { font-size: 28px; }
 
   .letter-card {
-    padding: 22px;
+    padding: 23px;
     font-size: 16px;
   }
+
+  .gallery img { height: 280px; }
+
+  .music-card { padding: 25px 18px; }
 }
 </style>
 </head>
@@ -241,9 +266,14 @@ footer {
 <!-- INTRO -->
 <div id="intro">
   <div class="intro-content">
-    <div style="font-size:65px">💌</div>
+    <div style="font-size:70px">💌</div>
+
     <h1>A Little Surprise</h1>
-    <p>A special little world, made with love. ❤️</p>
+
+    <p>
+      A beautiful little world, created especially for Meklit. ❤️
+    </p>
+
     <button class="main-btn" onclick="startSite()">
       Open My Surprise 💗
     </button>
@@ -252,7 +282,8 @@ footer {
 
 <!-- NAVIGATION -->
 <nav class="topbar">
-  <div class="logo">❤️ My Love</div>
+  <div class="logo">❤️ For Meklit</div>
+
   <button class="lang" onclick="changeLanguage()" id="langBtn">
     አማርኛ
   </button>
@@ -261,14 +292,21 @@ footer {
 <!-- HERO -->
 <header class="hero">
   <div class="hero-content">
-    <h1 data-en="You Are My Beautiful Story ❤️"
-        data-am="አንቺ የህይወቴ ውብ ታሪክ ነሽ ❤️">
-      You Are My Beautiful Story ❤️
+
+    <div class="heart-icon">❤️</div>
+
+    <h1
+      data-en="For Meklit ❤️"
+      data-am="ለመክሊት በፍቅር ❤️">
+      For Meklit ❤️
     </h1>
 
-    <p data-en="Some people make the world more beautiful just by being in it. You are one of them."
-       data-am="አንዳንድ ሰዎች በመኖራቸው ብቻ ዓለምን ያሳምራሉ። አንቺም ከእነዚያ አንዷ ነሽ።">
-      Some people make the world more beautiful just by being in it. You are one of them.
+    <p
+      data-en="You are the most beautiful chapter in my story. Some people make life special just by being in it. You are one of them."
+      data-am="በታሪኬ ውስጥ እጅግ ውብ ምዕራፍ ነሽ። አንዳንድ ሰዎች በመኖራቸው ብቻ ህይወትን ልዩ ያደርጋሉ። አንቺም ከእነዚያ አንዷ ነሽ።">
+      You are the most beautiful chapter in my story.
+      Some people make life special just by being in it.
+      You are one of them.
     </p>
 
     <button class="main-btn" onclick="showLetter()"
@@ -276,46 +314,66 @@ footer {
       data-am="ደብዳቤዬን አንብቢ 💌">
       Read My Letter 💌
     </button>
+
   </div>
 </header>
 
-<!-- LETTER -->
+<!-- LOVE LETTER -->
 <section id="letterSection">
+
   <h2 class="heading"
-      data-en="A Letter From My Heart"
-      data-am="ከልቤ የተጻፈ ደብዳቤ">
-    A Letter From My Heart
+      data-en="A Letter From My Heart 💌"
+      data-am="ከልቤ የተጻፈ ደብዳቤ 💌">
+    A Letter From My Heart 💌
   </h2>
 
+  <p class="description"
+     data-en="Some feelings are too beautiful to keep inside."
+     data-am="አንዳንድ ስሜቶች በውስጥ ለመያዝ እጅግ ውብ ናቸው።">
+    Some feelings are too beautiful to keep inside.
+  </p>
+
   <div class="letter-card" id="letter">
-    <div style="font-size:45px">💌</div>
-    <h2 style="color:#d63370">My Sweet Love ❤️</h2>
-    <br>
 
-    <p data-en="My dear, I may not always find the perfect words, but I hope you always feel how special you are."
-       data-am="ውዴ፣ ሁልጊዜ ትክክለኛውን ቃል ላገኝ አልችልም፤ ግን ለእኔ ምን ያህል ልዩ እንደሆንሽ ሁልጊዜ እንድትሰሚ እመኛለሁ።">
-      My dear, I may not always find the perfect words, but I hope you always feel how special you are.
+    <div style="font-size:50px">🌹</div>
+
+    <h2>My Sweet Meklit ❤️</h2>
+
+    <p
+      data-en="My dear Meklit, I may not always find the perfect words, but I hope you always feel how special you are."
+      data-am="ውድ መክሊት፣ ሁልጊዜ ትክክለኛውን ቃል ላገኝ አልችልም፤ ግን ለእኔ ምን ያህል ልዩ እንደሆንሽ እንድትረጂ እመኛለሁ።">
+      My dear Meklit, I may not always find the perfect words,
+      but I hope you always feel how special you are.
     </p>
+
     <br>
 
-    <p data-en="Your smile is a beautiful sunshine, your kindness is a gift, and every moment with you is a memory worth keeping."
-       data-am="ፈገግታሽ ውብ ፀሐይ ነው፣ ደግነትሽ ስጦታ ነው፣ ከአንቺ ጋር የሚያልፍ ጊዜም ሁሉ ሊጠበቅ የሚገባው ትዝታ ነው።">
-      Your smile is a beautiful sunshine, your kindness is a gift, and every moment with you is a memory worth keeping.
+    <p
+      data-en="Your smile brings light, your kindness brings warmth, and your presence makes ordinary moments beautiful."
+      data-am="ፈገግታሽ ብርሃንን ያመጣል፣ ደግነትሽ ሙቀትን ይሰጣል፣ መኖርሽም ተራ ጊዜያትን ውብ ያደርጋል።">
+      Your smile brings light, your kindness brings warmth,
+      and your presence makes ordinary moments beautiful.
     </p>
+
     <br>
 
-    <p data-en="Thank you for being you. May life always give us reasons to smile together."
-       data-am="እንደሆንሽ ስለሆንሽ አመሰግናለሁ። ህይወት አብረን የምንስቅባቸውን ብዙ ምክንያቶች ትስጠን።">
-      Thank you for being you. May life always give us reasons to smile together.
+    <p
+      data-en="I hope life gives you endless reasons to smile, beautiful dreams to follow, and happiness in every new day."
+      data-am="ህይወት የማያልቁ የፈገግታ ምክንያቶችን፣ የምትከተያቸውን ውብ ህልሞችንና በየአዲሱ ቀን ደስታን እንድትሰጥሽ እመኛለሁ።">
+      I hope life gives you endless reasons to smile,
+      beautiful dreams to follow, and happiness in every new day.
     </p>
+
     <br>
 
-    <h2 style="color:#d63370">Forever With Love ❤️</h2>
+    <h2>Forever With Love ❤️</h2>
+
   </div>
 </section>
 
 <!-- GALLERY -->
 <section>
+
   <h2 class="heading"
       data-en="A World Of Beauty 🌹"
       data-am="የውበት ዓለም 🌹">
@@ -323,51 +381,68 @@ footer {
   </h2>
 
   <p class="description"
-     data-en="Beautiful moments, flowers and endless memories."
-     data-am="ውብ ጊዜያት፣ አበቦችና የማይረሱ ትዝታዎች።">
-    Beautiful moments, flowers and endless memories.
+     data-en="Flowers, beautiful moments and sweet memories."
+     data-am="አበቦች፣ ውብ ጊዜያትና ጣፋጭ ትዝታዎች።">
+    Flowers, beautiful moments and sweet memories.
   </p>
 
   <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=800" alt="Flowers">
-    <img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=800" alt="Roses">
-    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800" alt="Couple">
-    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800" alt="Nature">
+
+    <img
+      src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=800"
+      alt="Beautiful flowers">
+
+    <img
+      src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=800"
+      alt="Beautiful roses">
+
+    <img
+      src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800"
+      alt="Romantic moment">
+
+    <img
+      src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800"
+      alt="Beautiful nature">
+
   </div>
 </section>
 
 <!-- MUSIC -->
 <section>
+
   <div class="music-card">
-    <h2 class="heading"
-        data-en="Music For The Heart 🎵"
-        data-am="ለልብ የሚሆን ሙዚቃ 🎵">
-      Music For The Heart 🎵
-    </h2>
 
-    <p data-en="A little music makes every moment special."
-       data-am="ትንሽ ሙዚቃ እያንዳንዱን ጊዜ ልዩ ያደርገዋል።">
-      A little music makes every moment special.
-    </p>
+    <div style="font-size:45px">🌙🎹</div>
 
-    <audio controls loop>
+    <h2 class="heading">Moonlight Sonata</h2>
+
+    <p>Beethoven — A little music for Meklit ❤️</p>
+
+    <audio id="loveMusic" controls loop>
       <source src="music.mp3" type="audio/mpeg">
       Your browser does not support audio.
     </audio>
+
+    <p style="margin-top:15px;font-size:13px">
+      Press play if the music does not start automatically.
+    </p>
+
   </div>
 </section>
 
 <!-- QUESTION -->
 <section class="question">
+
   <h2 class="heading"
       data-en="One Little Question 💕"
       data-am="አንድ ትንሽ ጥያቄ 💕">
     One Little Question 💕
   </h2>
 
-  <p data-en="Do you know how special you are?"
-     data-am="ለእኔ ምን ያህል ልዩ እንደሆንሽ ታውቂያለሽ?">
-    Do you know how special you are?
+  <p
+    data-en="Meklit, do you know how special you are?"
+    data-am="መክሊት፣ ለእኔ ምን ያህል ልዩ እንደሆንሽ ታውቂያለሽ?">
+    Meklit, do you know how special you are?
   </p>
 
   <button class="main-btn" onclick="answer()"
@@ -376,72 +451,105 @@ footer {
     Tell Me ❤️
   </button>
 
-  <h3 id="answer" style="margin-top:20px"></h3>
+  <h3 id="answer"></h3>
+
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <h2>❤️ My Love ❤️</h2>
 
-  <p data-en="Created with love, just for you."
-     data-am="በፍቅር ለአንቺ ብቻ የተሰራ።">
-    Created with love, just for you.
+  <h2>❤️ Meklit ❤️</h2>
+
+  <p
+    data-en="Created with love, especially for you."
+    data-am="በፍቅር በተለይ ለአንቺ የተሰራ።">
+    Created with love, especially for you.
   </p>
 
   <p>🌹 Forever Love 🌹</p>
+
 </footer>
 
 <script>
+
 let language = "en";
 
 function startSite() {
+
   document.getElementById("intro").style.display = "none";
+
+  const music = document.getElementById("loveMusic");
+
+  music.play().catch(() => {
+    console.log("Press the play button to start music.");
+  });
+
 }
 
 function showLetter() {
+
   const letter = document.getElementById("letter");
+
   letter.style.display = "block";
-  document.getElementById("letterSection").scrollIntoView();
+
+  document.getElementById("letterSection").scrollIntoView({
+    behavior: "smooth"
+  });
+
 }
 
 function changeLanguage() {
+
   language = language === "en" ? "am" : "en";
 
-  document.querySelectorAll("[data-en]").forEach(el => {
-    el.textContent = el.dataset[language];
+  document.querySelectorAll("[data-en]").forEach(element => {
+
+    element.textContent = element.dataset[language];
+
   });
 
   document.getElementById("langBtn").textContent =
     language === "en" ? "አማርኛ" : "English";
 
   document.documentElement.lang = language;
+
 }
 
 function answer() {
+
   document.getElementById("answer").textContent =
     language === "en"
-      ? "You are loved more than words can say! ❤️"
-      : "ከቃላት በላይ ትወደጃለሽ! ❤️";
+      ? "You are loved more than words can say, Meklit! ❤️"
+      : "መክሊት፣ ከቃላት በላይ የምትወደጂ ሰው ነሽ! ❤️";
+
 }
 
 function createHeart() {
+
   const heart = document.createElement("div");
 
   heart.className = "floating-heart";
-  heart.textContent = ["❤️", "💕", "💗", "🌸"][
-    Math.floor(Math.random() * 4)
+
+  heart.textContent = ["❤️", "💕", "💗", "🌸", "🌹"][
+    Math.floor(Math.random() * 5)
   ];
 
   heart.style.left = Math.random() * 100 + "vw";
-  heart.style.fontSize = (15 + Math.random() * 25) + "px";
-  heart.style.animationDuration = (4 + Math.random() * 4) + "s";
+
+  heart.style.fontSize =
+    (15 + Math.random() * 25) + "px";
+
+  heart.style.animationDuration =
+    (4 + Math.random() * 4) + "s";
 
   document.body.appendChild(heart);
 
   setTimeout(() => heart.remove(), 8000);
+
 }
 
-setInterval(createHeart, 700);
+setInterval(createHeart, 900);
+
 </script>
 
 </body>
