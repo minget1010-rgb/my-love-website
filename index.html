@@ -4,551 +4,395 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>For Meklit ❤️</title>
 
 <style>
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: Georgia, serif;
-  background: #100b16;
-  color: #fff0f5;
-  overflow-x: hidden;
+    font-family: Georgia, serif;
+    background: linear-gradient(135deg, #100018, #301044, #160020);
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 850px;
+    margin: auto;
+    padding: 30px 15px 60px;
+}
+
+.language {
+    text-align: right;
 }
 
 button {
-  cursor: pointer;
-  border: none;
-  font-family: inherit;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    padding: 13px 22px;
+    margin: 8px;
+    font-size: 15px;
+    transition: 0.3s;
 }
 
-.topbar {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 7%;
-  background: #160e20;
-  border-bottom: 1px solid #d5a64c44;
+button:hover {
+    transform: scale(1.08);
 }
 
-.logo {
-  color: #e8bd70;
-  font-size: 23px;
-  font-weight: bold;
+.lang-btn {
+    background: #f7c5df;
+    color: #4b1740;
 }
 
-.lang {
-  background: #e8bd70;
-  color: #241326;
-  padding: 10px 20px;
-  border-radius: 25px;
-  font-weight: bold;
+h1 {
+    color: #ffd5e8;
+    font-size: clamp(35px, 7vw, 60px);
+    margin-top: 45px;
+    text-shadow: 0 0 20px #ff69b4;
 }
 
-.hero {
-  min-height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 40px 20px;
-  background:
-    linear-gradient(#130b1dcc, #130b1dcc),
-    url("https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=1600")
-    center/cover;
+.subtitle {
+    color: #f4c8e2;
+    margin: 20px 0;
+    font-size: 19px;
 }
 
-.hero-content {
-  max-width: 800px;
+.heart {
+    font-size: 65px;
+    margin: 25px;
+    animation: heartbeat 1.3s infinite;
 }
 
-.heart-icon {
-  font-size: 65px;
-  margin-bottom: 20px;
-  animation: beat 1.5s infinite;
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
 }
 
-@keyframes beat {
-  50% { transform: scale(1.2); }
+.card {
+    background: rgba(255,255,255,0.09);
+    border: 1px solid rgba(255,200,230,0.4);
+    border-radius: 22px;
+    padding: 30px 20px;
+    margin: 25px auto;
+    box-shadow: 0 0 25px rgba(255,105,180,0.15);
+    backdrop-filter: blur(8px);
 }
 
-.hero h1 {
-  font-size: clamp(42px, 8vw, 78px);
-  color: #f0c77c;
-  margin-bottom: 22px;
+h2 {
+    color: #ffc6e4;
+    margin-bottom: 18px;
 }
 
-.hero p {
-  font-size: 20px;
-  line-height: 1.9;
-  color: #f7e8ed;
+.message {
+    font-size: 19px;
+    line-height: 1.8;
+    color: #fff0f7;
+    min-height: 65px;
 }
 
-.main-btn {
-  margin-top: 28px;
-  padding: 15px 30px;
-  background: linear-gradient(135deg, #d9a84e, #f3d28c);
-  color: #271329;
-  border-radius: 30px;
-  font-size: 17px;
-  font-weight: bold;
-  transition: .3s;
+.pink {
+    background: linear-gradient(45deg, #ff4d94, #ff91c8);
+    color: #3b0826;
+    font-weight: bold;
 }
 
-.main-btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px #e8bd7066;
+.gold {
+    background: linear-gradient(45deg, #e9b84c, #ffe5a0);
+    color: #442b00;
+    font-weight: bold;
 }
 
-section {
-  padding: 80px 20px;
-  text-align: center;
+.purple {
+    background: linear-gradient(45deg, #a65bda, #df9dff);
+    color: white;
+    font-weight: bold;
 }
 
-.heading {
-  font-size: 35px;
-  color: #e8bd70;
-  margin-bottom: 18px;
-}
-
-.description {
-  color: #d9b9ca;
-  line-height: 1.9;
-}
-
-.letter-card {
-  max-width: 760px;
-  margin: 35px auto;
-  padding: 40px;
-  background: #21152a;
-  border: 1px solid #d5a64c66;
-  border-radius: 25px;
-  box-shadow: 0 10px 35px #0005;
-  line-height: 2.1;
-  font-size: 18px;
-  display: none;
-}
-
-.letter-card h2 {
-  color: #e8bd70;
-  margin: 15px 0;
-}
-
-.gallery {
-  max-width: 1100px;
-  margin: 40px auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 22px;
-}
-
-.gallery img {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-  border-radius: 20px;
-  border: 2px solid #d5a64c55;
-  transition: .4s;
-}
-
-.gallery img:hover {
-  transform: scale(1.04);
-}
-
-.music-card {
-  max-width: 550px;
-  margin: 35px auto;
-  padding: 35px;
-  background: #21152a;
-  border: 1px solid #d5a64c66;
-  border-radius: 25px;
-}
-
-.music-card p {
-  color: #d9b9ca;
-  line-height: 1.8;
-}
-
-audio {
-  width: 100%;
-  margin-top: 25px;
-}
-
-.question {
-  background: linear-gradient(135deg, #28142d, #170d20);
-}
-
-#answer {
-  color: #f0c77c;
-  margin-top: 25px;
-  line-height: 1.8;
+.hidden {
+    display: none;
 }
 
 footer {
-  padding: 40px 20px;
-  text-align: center;
-  background: #09060e;
-  color: #e8bd70;
-  line-height: 2.2;
-}
-
-#intro {
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  background: linear-gradient(135deg, #170b24, #70294d);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 25px;
-  color: white;
-}
-
-.intro-content h1 {
-  color: #f0c77c;
-  font-size: clamp(38px, 8vw, 65px);
-  margin: 20px 0;
-}
-
-.intro-content p {
-  line-height: 2;
+    margin-top: 40px;
+    color: #d9b5d0;
+    font-size: 14px;
 }
 
 .floating-heart {
-  position: fixed;
-  bottom: -40px;
-  z-index: 5;
-  pointer-events: none;
-  animation: float 7s linear forwards;
+    position: fixed;
+    bottom: -30px;
+    animation: floatUp 5s linear forwards;
+    pointer-events: none;
+    z-index: 10;
 }
 
-@keyframes float {
-  to {
-    transform: translateY(-110vh) rotate(360deg);
-    opacity: 0;
-  }
-}
-
-@media(max-width: 600px) {
-  .hero { min-height: 75vh; }
-
-  section { padding: 55px 15px; }
-
-  .heading { font-size: 28px; }
-
-  .letter-card {
-    padding: 23px;
-    font-size: 16px;
-  }
-
-  .gallery img { height: 280px; }
-
-  .music-card { padding: 25px 18px; }
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<!-- INTRO -->
-<div id="intro">
-  <div class="intro-content">
-    <div style="font-size:70px">💌</div>
+<div class="container">
 
-    <h1>A Little Surprise</h1>
+    <div class="language">
+        <button class="lang-btn" onclick="changeLanguage()">
+            🌍 Amharic / English
+        </button>
+    </div>
 
-    <p>
-      A beautiful little world, created especially for Meklit. ❤️
+    <div class="heart">❤️</div>
+
+    <h1 id="title">Hello, Meklit ❤️</h1>
+
+    <p class="subtitle" id="subtitle">
+        Someone has something special to tell you...
     </p>
 
-    <button class="main-btn" onclick="startSite()">
-      Open My Surprise 💗
-    </button>
-  </div>
+    <div class="card">
+        <h2 id="welcomeTitle">A Little Message For You 💌</h2>
+
+        <p class="message" id="welcomeMessage">
+            You make ordinary moments feel special.
+            Your smile can make a difficult day brighter.
+            This little website is just for you. ❤️
+        </p>
+
+        <button class="pink" onclick="showLove()" id="openButton">
+            Open My Heart ❤️
+        </button>
+    </div>
+
+    <div class="card">
+        <h2 id="funTitle">Let's Make You Smile 😊</h2>
+
+        <p class="message" id="funMessage">
+            Choose a button and see what happens!
+        </p>
+
+        <button class="pink" onclick="showSmile()">
+            😊 Make Me Smile
+        </button>
+
+        <button class="gold" onclick="showHug()">
+            🤗 Virtual Hug
+        </button>
+
+        <button class="purple" onclick="showCompliment()">
+            🌹 Sweet Words
+        </button>
+    </div>
+
+    <div class="card">
+        <h2 id="letterTitle">A Letter From The Heart 💌</h2>
+
+        <p class="message" id="letterMessage">
+            Some people bring happiness without even trying.
+            Some people make life more beautiful just by being in it.
+            You are one of those special people.
+            Never forget how precious you are. ❤️
+        </p>
+
+        <button class="pink" onclick="revealLetter()" id="letterButton">
+            Read A Special Secret 💕
+        </button>
+
+        <p class="message hidden" id="secretMessage">
+            My favorite part of the day is knowing that somewhere
+            in this world, you are smiling. ❤️
+        </p>
+    </div>
+
+    <div class="card">
+        <h2 id="surpriseTitle">One Last Surprise 🎁</h2>
+
+        <p class="message" id="surpriseMessage">
+            Are you ready for a little surprise?
+        </p>
+
+        <button class="gold" onclick="surprise()" id="surpriseButton">
+            Open Your Surprise 🎁
+        </button>
+    </div>
+
+    <footer>
+        Made with ❤️ and a little bit of magic.
+        <br>
+        For Meklit.
+    </footer>
+
 </div>
 
-<!-- NAVIGATION -->
-<nav class="topbar">
-  <div class="logo">❤️ For Meklit</div>
-
-  <button class="lang" onclick="changeLanguage()" id="langBtn">
-    አማርኛ
-  </button>
-</nav>
-
-<!-- HERO -->
-<header class="hero">
-  <div class="hero-content">
-
-    <div class="heart-icon">❤️</div>
-
-    <h1
-      data-en="For Meklit ❤️"
-      data-am="ለመክሊት በፍቅር ❤️">
-      For Meklit ❤️
-    </h1>
-
-    <p
-      data-en="You are the most beautiful chapter in my story. Some people make life special just by being in it. You are one of them."
-      data-am="በታሪኬ ውስጥ እጅግ ውብ ምዕራፍ ነሽ። አንዳንድ ሰዎች በመኖራቸው ብቻ ህይወትን ልዩ ያደርጋሉ። አንቺም ከእነዚያ አንዷ ነሽ።">
-      You are the most beautiful chapter in my story.
-      Some people make life special just by being in it.
-      You are one of them.
-    </p>
-
-    <button class="main-btn" onclick="showLetter()"
-      data-en="Read My Letter 💌"
-      data-am="ደብዳቤዬን አንብቢ 💌">
-      Read My Letter 💌
-    </button>
-
-  </div>
-</header>
-
-<!-- LOVE LETTER -->
-<section id="letterSection">
-
-  <h2 class="heading"
-      data-en="A Letter From My Heart 💌"
-      data-am="ከልቤ የተጻፈ ደብዳቤ 💌">
-    A Letter From My Heart 💌
-  </h2>
-
-  <p class="description"
-     data-en="Some feelings are too beautiful to keep inside."
-     data-am="አንዳንድ ስሜቶች በውስጥ ለመያዝ እጅግ ውብ ናቸው።">
-    Some feelings are too beautiful to keep inside.
-  </p>
-
-  <div class="letter-card" id="letter">
-
-    <div style="font-size:50px">🌹</div>
-
-    <h2>My Sweet Meklit ❤️</h2>
-
-    <p
-      data-en="My dear Meklit, I may not always find the perfect words, but I hope you always feel how special you are."
-      data-am="ውድ መክሊት፣ ሁልጊዜ ትክክለኛውን ቃል ላገኝ አልችልም፤ ግን ለእኔ ምን ያህል ልዩ እንደሆንሽ እንድትረጂ እመኛለሁ።">
-      My dear Meklit, I may not always find the perfect words,
-      but I hope you always feel how special you are.
-    </p>
-
-    <br>
-
-    <p
-      data-en="Your smile brings light, your kindness brings warmth, and your presence makes ordinary moments beautiful."
-      data-am="ፈገግታሽ ብርሃንን ያመጣል፣ ደግነትሽ ሙቀትን ይሰጣል፣ መኖርሽም ተራ ጊዜያትን ውብ ያደርጋል።">
-      Your smile brings light, your kindness brings warmth,
-      and your presence makes ordinary moments beautiful.
-    </p>
-
-    <br>
-
-    <p
-      data-en="I hope life gives you endless reasons to smile, beautiful dreams to follow, and happiness in every new day."
-      data-am="ህይወት የማያልቁ የፈገግታ ምክንያቶችን፣ የምትከተያቸውን ውብ ህልሞችንና በየአዲሱ ቀን ደስታን እንድትሰጥሽ እመኛለሁ።">
-      I hope life gives you endless reasons to smile,
-      beautiful dreams to follow, and happiness in every new day.
-    </p>
-
-    <br>
-
-    <h2>Forever With Love ❤️</h2>
-
-  </div>
-</section>
-
-<!-- GALLERY -->
-<section>
-
-  <h2 class="heading"
-      data-en="A World Of Beauty 🌹"
-      data-am="የውበት ዓለም 🌹">
-    A World Of Beauty 🌹
-  </h2>
-
-  <p class="description"
-     data-en="Flowers, beautiful moments and sweet memories."
-     data-am="አበቦች፣ ውብ ጊዜያትና ጣፋጭ ትዝታዎች።">
-    Flowers, beautiful moments and sweet memories.
-  </p>
-
-  <div class="gallery">
-
-    <img
-      src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=800"
-      alt="Beautiful flowers">
-
-    <img
-      src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=800"
-      alt="Beautiful roses">
-
-    <img
-      src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800"
-      alt="Romantic moment">
-
-    <img
-      src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800"
-      alt="Beautiful nature">
-
-  </div>
-</section>
-
-<!-- MUSIC -->
-<section>
-
-  <div class="music-card">
-
-    <div style="font-size:45px">🌙🎹</div>
-
-    <h2 class="heading">Moonlight Sonata</h2>
-
-    <p>Beethoven — A little music for Meklit ❤️</p>
-
-    <audio id="loveMusic" controls loop>
-      <source src="music.mp3" type="audio/mpeg">
-      Your browser does not support audio.
-    </audio>
-
-    <p style="margin-top:15px;font-size:13px">
-      Press play if the music does not start automatically.
-    </p>
-
-  </div>
-</section>
-
-<!-- QUESTION -->
-<section class="question">
-
-  <h2 class="heading"
-      data-en="One Little Question 💕"
-      data-am="አንድ ትንሽ ጥያቄ 💕">
-    One Little Question 💕
-  </h2>
-
-  <p
-    data-en="Meklit, do you know how special you are?"
-    data-am="መክሊት፣ ለእኔ ምን ያህል ልዩ እንደሆንሽ ታውቂያለሽ?">
-    Meklit, do you know how special you are?
-  </p>
-
-  <button class="main-btn" onclick="answer()"
-    data-en="Tell Me ❤️"
-    data-am="ንገረኝ ❤️">
-    Tell Me ❤️
-  </button>
-
-  <h3 id="answer"></h3>
-
-</section>
-
-<!-- FOOTER -->
-<footer>
-
-  <h2>❤️ Meklit ❤️</h2>
-
-  <p
-    data-en="Created with love, especially for you."
-    data-am="በፍቅር በተለይ ለአንቺ የተሰራ።">
-    Created with love, especially for you.
-  </p>
-
-  <p>🌹 Forever Love 🌹</p>
-
-</footer>
-
 <script>
+let isAmharic = false;
 
-let language = "en";
+const smiles = [
+    "Your smile deserves its own sunshine! ☀️❤️",
+    "Warning! Your smile is too beautiful! 😍",
+    "If happiness had a face, it would look like your smile! 😊",
+    "Keep smiling. The world needs your beautiful energy! 🌸"
+];
 
-function startSite() {
+const hugs = [
+    "Sending you the biggest virtual hug! 🤗❤️",
+    "Imagine a warm hug that lasts forever! 🫂",
+    "A little hug to remind you that you are special! 💕"
+];
 
-  document.getElementById("intro").style.display = "none";
+const compliments = [
+    "You are beautiful in ways words cannot explain. 🌹",
+    "Your kindness makes you even more special. ❤️",
+    "You are one of a kind. Never forget that! ✨",
+    "You deserve happiness, laughter and endless love. 🥰"
+];
 
-  const music = document.getElementById("loveMusic");
-
-  music.play().catch(() => {
-    console.log("Press the play button to start music.");
-  });
-
+function randomMessage(list) {
+    return list[Math.floor(Math.random() * list.length)];
 }
 
-function showLetter() {
+function showLove() {
+    document.getElementById("welcomeMessage").innerHTML =
+        isAmharic
+        ? "ፈገግታሽ ቀንን ያበራል። መኖርሽ ብቻ ለአንድ ሰው ልዩ ደስታ ነው። ❤️"
+        : "Your smile makes the day brighter. Just being you brings happiness to someone. ❤️";
 
-  const letter = document.getElementById("letter");
+    createHearts();
+}
 
-  letter.style.display = "block";
+function showSmile() {
+    document.getElementById("funMessage").innerText =
+        isAmharic
+        ? randomMessage([
+            "ፈገግታሽ ከፀሐይ ብርሃን ይበልጣል! ☀️❤️",
+            "ሳቅሽ በጣም ያምራል! 😊",
+            "ዛሬም ፈገግ በይ፤ ዓለም ያንቺን ፈገግታ ያስፈልገዋል! 🌸"
+        ])
+        : randomMessage(smiles);
 
-  document.getElementById("letterSection").scrollIntoView({
-    behavior: "smooth"
-  });
+    createHearts();
+}
 
+function showHug() {
+    document.getElementById("funMessage").innerText =
+        isAmharic
+        ? randomMessage([
+            "ትልቅ ምናባዊ እቅፍ ላክሁልሽ! 🤗❤️",
+            "ይህ እቅፍ ደስታን እንዲሰጥሽ እመኛለሁ! 🫂",
+            "ልዩ መሆንሽን የሚያስታውስ እቅፍ! 💕"
+        ])
+        : randomMessage(hugs);
+
+    createHearts();
+}
+
+function showCompliment() {
+    document.getElementById("funMessage").innerText =
+        isAmharic
+        ? randomMessage([
+            "ውበትሽን በቃላት መግለጽ አይቻልም! 🌹",
+            "ደግነትሽ የበለጠ ልዩ ያደርግሻል! ❤️",
+            "አንቺ ልዩ ነሽ፤ ይህን ፈጽሞ አትርሺ! ✨"
+        ])
+        : randomMessage(compliments);
+
+    createHearts();
+}
+
+function revealLetter() {
+    document.getElementById("secretMessage").classList.toggle("hidden");
+    createHearts();
+}
+
+function surprise() {
+    document.getElementById("surpriseMessage").innerHTML =
+        isAmharic
+        ? "🎉 እንኳን ደስ አለሽ! ይህ ድረገጽ ሁሉ ለአንቺ ነው። ሁሌም ፈገግ በይ፣ ሁሌም ደስተኛ ሁኚ። ከልብ ❤️"
+        : "🎉 Surprise! This whole little website was made for you. Keep smiling, keep shining, and always remember that you are special. ❤️";
+
+    createHearts();
+}
+
+function createHearts() {
+    const emojis = ["❤️", "💕", "💖", "💗", "🌹", "✨"];
+
+    for (let i = 0; i < 12; i++) {
+        const heart = document.createElement("div");
+        heart.className = "floating-heart";
+        heart.innerText = randomMessage(emojis);
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = (18 + Math.random() * 22) + "px";
+        heart.style.animationDuration = (3 + Math.random() * 3) + "s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 6000);
+    }
 }
 
 function changeLanguage() {
+    isAmharic = !isAmharic;
 
-  language = language === "en" ? "am" : "en";
+    document.getElementById("title").innerText =
+        isAmharic ? "ሰላም መክሊት ❤️" : "Hello, Meklit ❤️";
 
-  document.querySelectorAll("[data-en]").forEach(element => {
+    document.getElementById("subtitle").innerText =
+        isAmharic
+        ? "አንድ ሰው ልዩ ነገር ሊነግርሽ ይፈልጋል..."
+        : "Someone has something special to tell you...";
 
-    element.textContent = element.dataset[language];
+    document.getElementById("welcomeTitle").innerText =
+        isAmharic ? "ለአንቺ የተዘጋጀ መልዕክት 💌" : "A Little Message For You 💌";
 
-  });
+    document.getElementById("welcomeMessage").innerText =
+        isAmharic
+        ? "ፈገግታሽ ቀንን ያበራል። መኖርሽ ብቻ ለአንድ ሰው ልዩ ደስታ ነው። ❤️"
+        : "You make ordinary moments feel special. Your smile can make a difficult day brighter. This little website is just for you. ❤️";
 
-  document.getElementById("langBtn").textContent =
-    language === "en" ? "አማርኛ" : "English";
+    document.getElementById("openButton").innerText =
+        isAmharic ? "ልቤን ክፈቺ ❤️" : "Open My Heart ❤️";
 
-  document.documentElement.lang = language;
+    document.getElementById("funTitle").innerText =
+        isAmharic ? "ፈገግ እናድርግሽ 😊" : "Let's Make You Smile 😊";
 
+    document.getElementById("funMessage").innerText =
+        isAmharic ? "አንዱን ቁልፍ ተጫኚና እይ! ❤️" : "Choose a button and see what happens!";
+
+    document.getElementById("letterTitle").innerText =
+        isAmharic ? "ከልብ የተጻፈ ደብዳቤ 💌" : "A Letter From The Heart 💌";
+
+    document.getElementById("letterButton").innerText =
+        isAmharic ? "ልዩ ሚስጥር አንብቢ 💕" : "Read A Special Secret 💕";
+
+    document.getElementById("surpriseTitle").innerText =
+        isAmharic ? "የመጨረሻ ስጦታ 🎁" : "One Last Surprise 🎁";
+
+    document.getElementById("surpriseMessage").innerText =
+        isAmharic ? "ትንሽ ስጦታ ለማየት ዝግጁ ነሽ?" : "Are you ready for a little surprise?";
+
+    document.getElementById("surpriseButton").innerText =
+        isAmharic ? "ስጦታሽን ክፈቺ 🎁" : "Open Your Surprise 🎁";
+
+    document.getElementById("secretMessage").innerText =
+        isAmharic
+        ? "የቀኔ ደስታ አንድ ቦታ ላይ ፈገግ እያልሽ መሆንሽን ማወቅ ነው። ❤️"
+        : "My favorite part of the day is knowing that somewhere in this world, you are smiling. ❤️";
 }
 
-function answer() {
-
-  document.getElementById("answer").textContent =
-    language === "en"
-      ? "You are loved more than words can say, Meklit! ❤️"
-      : "መክሊት፣ ከቃላት በላይ የምትወደጂ ሰው ነሽ! ❤️";
-
-}
-
-function createHeart() {
-
-  const heart = document.createElement("div");
-
-  heart.className = "floating-heart";
-
-  heart.textContent = ["❤️", "💕", "💗", "🌸", "🌹"][
-    Math.floor(Math.random() * 5)
-  ];
-
-  heart.style.left = Math.random() * 100 + "vw";
-
-  heart.style.fontSize =
-    (15 + Math.random() * 25) + "px";
-
-  heart.style.animationDuration =
-    (4 + Math.random() * 4) + "s";
-
-  document.body.appendChild(heart);
-
-  setTimeout(() => heart.remove(), 8000);
-
-}
-
-setInterval(createHeart, 900);
+setInterval(() => {
+    if (Math.random() > 0.5) createHearts();
+}, 3500);
 
 </script>
 
